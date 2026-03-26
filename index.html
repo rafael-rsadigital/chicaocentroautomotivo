@@ -97,12 +97,12 @@
   ]
   </script>
 
-  <!-- Fontes do Google -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- Ícones FontAwesome -->
+  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -116,6 +116,7 @@
       --white: #ffffff;
       --shadow: 0 10px 30px rgba(0,0,0,0.1);
       --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --google-blue: #4285F4;
     }
 
     /* Reset e Base */
@@ -290,15 +291,132 @@
       color: var(--secondary);
     }
 
-    .google-reviews-img {
-      max-width: 160px;
-      height: auto;
-      margin: 15px auto 0;
-      display: block;
-      mix-blend-mode: multiply;
-      filter: contrast(1.1); 
+    /* Google Reviews Style */
+    .reviews-section {
+      background: #f8f9fa; /* Fundo cinza bem claro, estilo Google */
+      color: var(--text);
+      overflow: hidden;
     }
 
+    .reviews-section h2 { 
+      color: #202124; 
+      margin-bottom: 10px;
+    }
+
+    .google-reviews-img {
+      max-width: 140px;
+      height: auto;
+      margin: 0 auto 30px;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+
+    .reviews-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      cursor: grab;
+      padding: 20px 0 40px;
+      scrollbar-width: none;
+    }
+    
+    .reviews-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .reviews-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: scrollReviews 30s linear infinite; 
+    }
+
+    .review-card {
+      width: 340px;
+      background: var(--white);
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-family: 'Roboto', sans-serif; /* Fonte padrão do Google */
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #e8eaed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      color: #5f6368;
+      text-transform: uppercase;
+    }
+
+    .review-user-info strong {
+      display: block;
+      color: #202124;
+      font-size: 0.9rem;
+    }
+
+    .review-user-info span {
+      display: block;
+      color: #70757a;
+      font-size: 0.75rem;
+    }
+
+    .stars { color: #fabb05; font-size: 0.85rem; margin: 4px 0; }
+
+    .review-text {
+      color: #3c4043;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Galeria de Estrutura */
+    .reels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .reel-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .reel-video-container {
+      width: 100%;
+      aspect-ratio: 9/16;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 2px solid var(--primary);
+      background: #000;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .reel-video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Services Grid */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -329,99 +447,6 @@
       border-radius: 50%;
       margin-bottom: 20px;
     }
-
-    /* Galeria de Estrutura */
-    .reels-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .reel-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s ease;
-    }
-
-    .reel-video-container {
-      width: 100%;
-      aspect-ratio: 9/16;
-      border-radius: 15px;
-      overflow: hidden;
-      border: 2px solid var(--primary);
-      background: var(--secondary);
-      box-shadow: var(--shadow);
-    }
-
-    .reel-video-container video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      background: #000;
-    }
-
-    .reel-caption {
-      margin-top: 12px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: var(--secondary);
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    /* Depoimentos */
-    .reviews-section {
-      background: var(--secondary);
-      color: var(--white);
-      overflow: hidden;
-    }
-
-    .reviews-section h2 { color: var(--primary); }
-
-    .reviews-wrapper {
-      width: 100%;
-      overflow-x: auto;
-      cursor: grab;
-      padding-bottom: 20px;
-      scrollbar-width: none;
-    }
-    
-    .reviews-wrapper::-webkit-scrollbar {
-      display: none;
-    }
-
-    .reviews-track {
-      display: flex;
-      gap: 30px;
-      width: max-content;
-      animation: scrollReviews 25s linear infinite; 
-      padding: 20px 0;
-    }
-
-    .reviews-wrapper:active {
-      cursor: grabbing;
-    }
-
-    .reviews-wrapper:hover .reviews-track {
-      animation-play-state: paused;
-    }
-
-    @keyframes scrollReviews {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-50% - 15px)); }
-    }
-
-    .review-card {
-      width: 320px;
-      background: rgba(255,255,255,0.05);
-      padding: 25px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.1);
-      scroll-snap-align: start;
-    }
-
-    .stars { color: var(--primary); margin-bottom: 10px; }
 
     /* FAQ */
     .faq-container {
@@ -458,7 +483,7 @@
 
     .faq-item.active .faq-answer {
       padding: 15px 20px;
-      max-height: 250px; /* Aumentado para o FAQ maior */
+      max-height: 300px;
     }
 
     /* Unidades */
@@ -889,7 +914,7 @@
     </div>
   </section>
 
-  <!-- Galeria Estrutura - Preload None e Atributos Poster garantidos -->
+  <!-- Galeria Estrutura - Preload None e Posters Forçados -->
   <section id="galeria">
     <div class="section-title">
       <h2>Nossa Estrutura</h2>
@@ -944,7 +969,7 @@
     </div>
   </section>
 
-  <!-- Avaliações -->
+  <!-- Avaliações Estilo Google (Light Mode) -->
   <section id="avaliacoes" class="reviews-section">
     <div class="section-title">
       <h2>O que nossos clientes dizem</h2>
@@ -952,31 +977,102 @@
     </div>
     <div class="reviews-wrapper" id="reviews-wrapper">
       <div class="reviews-track" id="reviews-track">
+        
+        <!-- Depoimento 1 -->
         <div class="review-card">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p class="review-text">"Podem confiar, não é um centro automotivo que quer 'enfiar' serviços desnecessários. Saí de lá satisfeito."</p>
-          <div class="review-author">Lucas Madona</div>
+          <div class="review-header">
+            <div class="review-avatar" style="background: #1a73e8; color: #fff;">L</div>
+            <div class="review-user-info">
+              <strong>Lucas Madona</strong>
+              <span>4 meses atrás</span>
+            </div>
+          </div>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Podem confiar, não é um centro automotivo que quer 'enfiar' serviços desnecessários no cliente. Fui, fiz o serviço que solicitei, eles orientaram o que deveria fazer. Sai de lá satisfeito."</p>
         </div>
+
+        <!-- Depoimento 2 -->
         <div class="review-card">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="review-header">
+            <div class="review-avatar" style="background: #ea4335; color: #fff;">L</div>
+            <div class="review-user-info">
+              <strong>Luciano Rizzuto</strong>
+              <span>2 meses atrás</span>
+            </div>
+          </div>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
           <p class="review-text">"Excelente atendimento e preço justo. Profissionais honestos e competentes. Recomendo!"</p>
-          <div class="review-author">Luciano Rizzuto</div>
         </div>
+
+        <!-- Depoimento 3 -->
         <div class="review-card">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p class="review-text">"Atendimento diferenciado. Alinhamento e balanceamento ficaram top. Recomendo!"</p>
-          <div class="review-author">Fernando Cezar</div>
+          <div class="review-header">
+            <div class="review-avatar" style="background: #fbbc05; color: #fff;">F</div>
+            <div class="review-user-info">
+              <strong>Fabiano Maverick</strong>
+              <span>4 meses atrás</span>
+            </div>
+          </div>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Local com ótimo atendimento e com honestidade, o mais importante, pois tive meu problema resolvido e não precisei gastar nada além do meu problema!"</p>
         </div>
+
+        <!-- Depoimento 4 -->
         <div class="review-card">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p class="review-text">"Tive problema com pneu e eles me atenderam de prontidão. Ótimo lugar!"</p>
-          <div class="review-author">Leticia Ibrahim</div>
+          <div class="review-header">
+            <div class="review-avatar" style="background: #34a853; color: #fff;">F</div>
+            <div class="review-user-info">
+              <strong>Fernando Cezar</strong>
+              <span>1 mês atrás</span>
+            </div>
+          </div>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Ótima oficina. Alinhamento e balanceamento ficaram top. Troca de pneu ficou zerado. Atendimento diferenciado. Recomendo!"</p>
         </div>
+
+        <!-- Depoimento 5 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background: #673ab7; color: #fff;">L</div>
+            <div class="review-user-info">
+              <strong>Leticia Ibrahim</strong>
+              <span>4 meses atrás</span>
+            </div>
+          </div>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Ótimo lugar tive problema com pneu e eles me atenderam de prontidão, ótimo atendimento também! Indico sempre"</p>
+        </div>
+
+        <!-- Duplicação para loop infinito suave -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background: #1a73e8; color: #fff;">L</div>
+            <div class="review-user-info">
+              <strong>Lucas Madona</strong>
+              <span>4 meses atrás</span>
+            </div>
+          </div>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Podem confiar, não é um centro automotivo que quer 'enfiar' serviços desnecessários no cliente..."</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FAQ - Atualizado conforme solicitado -->
+  <!-- FAQ Reforçado -->
   <section id="faq">
     <div class="section-title">
       <h2>Dúvidas sobre Mecânico e Borracharia em Jacareí</h2>
@@ -1048,7 +1144,7 @@
       <div class="faq-item">
         <button class="faq-question">O atendimento é confiável mesmo? <span>+</span></button>
         <div class="faq-answer">
-          Sim! Nosso compromisso é com transparência e honestidade. Só realizamos serviços necessários e explicamos tudo para o cliente antes de qualquer execução.
+          Sim! Nosso compromisso é com transparência e honestidade. Só realizais serviços necessários e explicamos tudo para o cliente antes de qualquer execução.
         </div>
       </div>
 
