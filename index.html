@@ -139,21 +139,21 @@
       padding: 80px 5% 0;
     }
 
-    /* Background Web Efeito Vidro */
+    /* Background Web Efeito Vidro - Ajustado */
     @media (min-width: 993px) {
       .hero {
-        background-image: url('img/background-web-chicao.jpg'); /* Atualizado para buscar na pasta img/ */
+        background-image: url('img/background-web-chicao.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: center 30%; /* Abaixa um pouco a imagem */
         background-repeat: no-repeat;
       }
       .hero::before {
         content: '';
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.45);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(0, 0, 0, 0.3); /* Transparência mais visível (de 0.45 para 0.3) */
+        backdrop-filter: blur(15px); /* Desfoque levemente maior para realçar o efeito vidro */
+        -webkit-backdrop-filter: blur(15px);
         z-index: 1;
       }
     }
@@ -1049,7 +1049,7 @@
             if(window.scrollY > 50) {
                 header.style.background = "rgba(0,0,0,0.95)";
             } else {
-                header.style.background = "rgba(0,0,0,0.8)";
+                header.style.background = "transparent";
             }
         }
     });
