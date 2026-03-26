@@ -116,7 +116,6 @@
       --white: #ffffff;
       --shadow: 0 10px 30px rgba(0,0,0,0.1);
       --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      --google-blue: #4285F4;
     }
 
     /* Reset e Base */
@@ -293,7 +292,7 @@
 
     /* Google Reviews Style */
     .reviews-section {
-      background: #f8f9fa; /* Fundo cinza bem claro, estilo Google */
+      background: #f8f9fa; 
       color: var(--text);
       overflow: hidden;
     }
@@ -339,7 +338,7 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      font-family: 'Roboto', sans-serif; /* Fonte padrão do Google */
+      font-family: 'Roboto', sans-serif;
     }
 
     .review-header {
@@ -416,6 +415,15 @@
       display: block;
     }
 
+    .reel-caption {
+      margin-top: 12px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--secondary);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
     /* Services Grid */
     .services-grid {
       display: grid;
@@ -483,7 +491,7 @@
 
     .faq-item.active .faq-answer {
       padding: 15px 20px;
-      max-height: 300px;
+      max-height: 350px;
     }
 
     /* Unidades */
@@ -588,6 +596,7 @@
       color: var(--white);
     }
 
+    /* Botão WhatsApp Flutuante - Limpo */
     .whatsapp-float {
       position: fixed;
       bottom: 25px;
@@ -601,9 +610,13 @@
       align-items: center;
       justify-content: center;
       font-size: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Removido borda ou risco branco */
       z-index: 999;
-      border: 2px solid white;
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
     }
 
     footer {
@@ -914,7 +927,7 @@
     </div>
   </section>
 
-  <!-- Galeria Estrutura - Preload None e Posters Forçados -->
+  <!-- Galeria Estrutura - Preload None e Posters Atualizados -->
   <section id="galeria">
     <div class="section-title">
       <h2>Nossa Estrutura</h2>
@@ -922,45 +935,50 @@
     </div>
 
     <div class="reels-grid">
+      <!-- Vídeo 1: Apresentação Chicão Centro Automotivo -->
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="none" poster="img/capa-apresentacao.webp">
+          <video controls preload="none" poster="img/capa-video-1-chicao-centro-automotivo.JPG">
             <source src="video/apresentacao-chicao-centro-automotivo.mp4" type="video/mp4">
           </video>
         </div>
         <p class="reel-caption">Chicão Centro Automotivo</p>
       </div>
 
+      <!-- Vídeo 2: Jardim América -->
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="none" poster="img/capa-unidade-jardim.webp">
+          <video controls preload="none" poster="img/capa-video-1-chicao-centro-automotivo.JPG">
             <source src="video/unidade-jardim-america.mp4" type="video/mp4">
           </video>
         </div>
         <p class="reel-caption">Jardim América</p>
       </div>
 
+      <!-- Vídeo 3: Parque dos Príncipes -->
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="none" poster="img/capa-parque-principes.webp">
+          <video controls preload="none" poster="img/capa-video-parque-dos-principes.jpg">
             <source src="video/unidade-parque-dos-principes.mp4" type="video/mp4">
           </video>
         </div>
         <p class="reel-caption">Parque dos Príncipes</p>
       </div>
 
+      <!-- Vídeo 4: Parque Itamaraty -->
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="none" poster="img/capa-parque-itamaraty.webp">
+          <video controls preload="none" poster="img/capa-video-parque-itamaraty.jpeg">
             <source src="video/Unidade-Parque-Itamaraty.webm" type="video/webm">
           </video>
         </div>
         <p class="reel-caption">Parque Itamaraty</p>
       </div>
 
+      <!-- Vídeo 5: Borracharia São João -->
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="none" poster="img/capa-borracharia-sao-joao.webp">
+          <video controls preload="none" poster="img/capa-video-borracharia-sao-joao-.jpg">
             <source src="video/borracharia-sao-joao.mp4" type="video/mp4">
           </video>
         </div>
@@ -978,7 +996,6 @@
     <div class="reviews-wrapper" id="reviews-wrapper">
       <div class="reviews-track" id="reviews-track">
         
-        <!-- Depoimento 1 -->
         <div class="review-card">
           <div class="review-header">
             <div class="review-avatar" style="background: #1a73e8; color: #fff;">L</div>
@@ -987,13 +1004,10 @@
               <span>4 meses atrás</span>
             </div>
           </div>
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Podem confiar, não é um centro automotivo que quer 'enfiar' serviços desnecessários no cliente. Fui, fiz o serviço que solicitei, eles orientaram o que deveria fazer. Sai de lá satisfeito."</p>
         </div>
 
-        <!-- Depoimento 2 -->
         <div class="review-card">
           <div class="review-header">
             <div class="review-avatar" style="background: #ea4335; color: #fff;">L</div>
@@ -1002,13 +1016,10 @@
               <span>2 meses atrás</span>
             </div>
           </div>
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Excelente atendimento e preço justo. Profissionais honestos e competentes. Recomendo!"</p>
         </div>
 
-        <!-- Depoimento 3 -->
         <div class="review-card">
           <div class="review-header">
             <div class="review-avatar" style="background: #fbbc05; color: #fff;">F</div>
@@ -1017,13 +1028,10 @@
               <span>4 meses atrás</span>
             </div>
           </div>
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">"Local com ótimo atendimento e com honestidade, o mais importante, pois tive meu problema resolvido e não precisei gastar nada além do meu problema!"</p>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"Local com ótimo atendimento e com honestidade, o mais importante, pois tive meu problema resolvido e não precisei gastar nada além!"</p>
         </div>
 
-        <!-- Depoimento 4 -->
         <div class="review-card">
           <div class="review-header">
             <div class="review-avatar" style="background: #34a853; color: #fff;">F</div>
@@ -1032,13 +1040,10 @@
               <span>1 mês atrás</span>
             </div>
           </div>
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Ótima oficina. Alinhamento e balanceamento ficaram top. Troca de pneu ficou zerado. Atendimento diferenciado. Recomendo!"</p>
         </div>
 
-        <!-- Depoimento 5 -->
         <div class="review-card">
           <div class="review-header">
             <div class="review-avatar" style="background: #673ab7; color: #fff;">L</div>
@@ -1047,32 +1052,15 @@
               <span>4 meses atrás</span>
             </div>
           </div>
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Ótimo lugar tive problema com pneu e eles me atenderam de prontidão, ótimo atendimento também! Indico sempre"</p>
-        </div>
-
-        <!-- Duplicação para loop infinito suave -->
-        <div class="review-card">
-          <div class="review-header">
-            <div class="review-avatar" style="background: #1a73e8; color: #fff;">L</div>
-            <div class="review-user-info">
-              <strong>Lucas Madona</strong>
-              <span>4 meses atrás</span>
-            </div>
-          </div>
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">"Podem confiar, não é um centro automotivo que quer 'enfiar' serviços desnecessários no cliente..."</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- FAQ Reforçado -->
+  <!-- FAQ Estratégico - 12 Itens -->
   <section id="faq">
     <div class="section-title">
       <h2>Dúvidas sobre Mecânico e Borracharia em Jacareí</h2>
@@ -1144,7 +1132,7 @@
       <div class="faq-item">
         <button class="faq-question">O atendimento é confiável mesmo? <span>+</span></button>
         <div class="faq-answer">
-          Sim! Nosso compromisso é com transparência e honestidade. Só realizais serviços necessários e explicamos tudo para o cliente antes de qualquer execução.
+          Sim! Nosso compromisso é com transparência e honestidade. Só realizamos serviços necessários e explicamos tudo para o cliente antes de qualquer execução.
         </div>
       </div>
 
@@ -1191,7 +1179,7 @@
     </div>
   </footer>
 
-  <!-- Botão Flutuante WhatsApp -->
+  <!-- Botão WhatsApp Flutuante - Limpo sem riscos -->
   <a href="javascript:void(0)" onclick="openWaModal()" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
@@ -1202,7 +1190,7 @@
       <div class="modal-close" onclick="closeWaModal()"><i class="fas fa-times"></i></div>
       <h3 style="margin-bottom:15px;">Falar com o Chicão</h3>
       
-      <a href="https://wa.me/5512981670201?text=Olá! Vim pelo site e gostaria de um orçamento para a Unidade Jardim América." class="whatsapp-option">
+      <a href="https://wa.me/5512981670201?text=Olá! Gostaria de um orçamento para a Unidade Jardim América." class="whatsapp-option">
         <i class="fab fa-whatsapp"></i>
         <div>
           <strong>Unidade Jardim América</strong>
@@ -1210,7 +1198,7 @@
         </div>
       </a>
 
-      <a href="https://wa.me/5512978113443?text=Olá! Vim pelo site e gostaria de um orçamento para a Unidade Parque dos Príncipes." class="whatsapp-option">
+      <a href="https://wa.me/5512978113443?text=Olá! Gostaria de um orçamento para a Unidade Parque dos Príncipes." class="whatsapp-option">
         <i class="fab fa-whatsapp"></i>
         <div>
           <strong>Unidade Parque dos Príncipes</strong>
