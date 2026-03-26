@@ -141,11 +141,17 @@
     .section-title { text-align: center; margin-bottom: 50px; }
     .section-title h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 15px; }
 
+    /* Serviços - Restaurado */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .service-card { background: var(--light); padding: 40px 30px; border-radius: 12px; transition: var(--transition); text-align: center; }
+    .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow); background: var(--white); }
+    .service-card i { font-size: 2rem; color: var(--primary); background: var(--secondary); width: 60px; height: 60px; line-height: 60px; border-radius: 50%; margin-bottom: 20px; display: inline-block; }
+
     /* Unidades */
     .units-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
     .unit-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #eee; display: flex; flex-direction: column; }
     .unit-info { padding: 25px; flex: 1; }
-    .unit-info h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 5px; color: var(--secondary); text-transform: uppercase; }
+    .unit-info h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 5px; color: var(--secondary); text-transform: uppercase; min-height: 2.6em; display: flex; align-items: center; }
     .unit-services { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); text-transform: uppercase; margin-bottom: 15px; display: block; }
     .unit-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
 
@@ -161,7 +167,7 @@
     .reel-video-container video { width: 100%; height: 100%; object-fit: cover; }
     .reel-caption { margin-top: 12px; font-weight: 700; font-size: 0.85rem; text-align: center; text-transform: uppercase; }
 
-    /* Avaliações Google Style */
+    /* Avaliações Estilo Google */
     .reviews-section { background: #f8f9fa; overflow: hidden; }
     .google-reviews-img { max-width: 140px; margin: 0 auto 30px; display: block; mix-blend-mode: multiply; }
     .reviews-wrapper { width: 100%; overflow: hidden; position: relative; padding: 20px 0; }
@@ -177,12 +183,12 @@
     .faq-item { margin-bottom: 10px; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; background: #fff; }
     .faq-question { width: 100%; padding: 18px; background: #fff; border: none; text-align: left; font-weight: 700; display: flex; justify-content: space-between; cursor: pointer; }
     .faq-answer { padding: 0 18px; max-height: 0; overflow: hidden; transition: 0.3s ease; background: #fafafa; font-size: 0.9rem; }
-    .faq-item.active .faq-answer { padding: 15px 18px; max-height: 300px; border-top: 1px solid #eee; }
+    .faq-item.active .faq-answer { padding: 15px 18px; max-height: 400px; border-top: 1px solid #eee; }
 
     /* Footer */
     footer { background: var(--secondary); color: #888; padding: 60px 5% 30px; }
     .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-    .footer-content h4 { color: #fff; margin-bottom: 15px; }
+    .footer-content h4 { color: #fff; margin-bottom: 15px; border-left: 4px solid var(--primary); padding-left: 10px; }
 
     /* WhatsApp Float */
     .whatsapp-float {
@@ -289,37 +295,47 @@
     </div>
   </section>
 
-  <!-- Serviços -->
+  <!-- Serviços - Restaurado para Versão Completa -->
   <section id="servicos">
     <div class="section-title">
       <h2>Serviços Automotivos em Jacareí</h2>
-      <p>Qualidade e transparência em todas as nossas unidades.</p>
+      <p>Qualidade, garantia e transparência para o seu veículo em qualquer unidade.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <i class="fas fa-oil-can"></i>
-        <h3>Troca de Óleo em Jacareí</h3>
-        <p>Óleo e filtros das melhores marcas para proteger o motor do seu veículo.</p>
+        <h3>Troca de Óleo</h3>
+        <p>Produtos de qualidade para manter a vida útil do seu motor em Jacareí.</p>
       </div>
       <div class="service-card">
         <i class="fas fa-car-side"></i>
-        <h3>Alinhamento e Balanceamento</h3>
-        <p>Tecnologia de ponta para garantir mais segurança e economia.</p>
+        <h3>Alinhamento e Balanc.</h3>
+        <p>Mais segurança e economia para os seus pneus e suspensão.</p>
       </div>
       <div class="service-card">
         <i class="fas fa-stop-circle"></i>
-        <h3>Freios e Suspensão</h3>
-        <p>Revisão completa para uma condução estável e segura.</p>
+        <h3>Sistema de Freios</h3>
+        <p>Manutenção completa de pastilhas e discos com segurança total.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tools"></i>
+        <h3>Suspensão</h3>
+        <p>Amortecedores e pivôs para garantir estabilidade e conforto.</p>
       </div>
       <div class="service-card">
         <i class="fas fa-circle-notch"></i>
         <h3>Pneus e Borracharia</h3>
-        <p>Venda de pneus novos, remold e borracharia em Jacareí.</p>
+        <p>Pneus novos e remold com o melhor custo-benefício da região.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-cogs"></i>
+        <h3>Mecânica Geral</h3>
+        <p>Diagnóstico preciso e reparos especializados em motores e sistemas.</p>
       </div>
     </div>
     <div style="text-align:center; margin-top:40px;">
       <button onclick="openWaModal()" class="btn-primary">
-        <i class="fab fa-whatsapp"></i> Pedir Orçamento Agora
+        <i class="fab fa-whatsapp"></i> Solicitar Orçamento Agora
       </button>
     </div>
   </section>
@@ -336,7 +352,7 @@
       <!-- Unidade 1 -->
       <div class="unit-card">
         <div class="unit-info">
-          <h3>Centro Automotivo Jardim América</h3>
+          <h3>Centro Automotivo no Jardim América – Jacareí</h3>
           <span class="unit-services">Mecânica Completa e Pneus</span>
           <p><i class="fas fa-map-marker-alt"></i> Av. Edmundo de Souza, 19</p>
           <p><i class="fas fa-phone"></i> (12) 98167-0201</p>
@@ -349,7 +365,7 @@
       <!-- Unidade 2 -->
       <div class="unit-card">
         <div class="unit-info">
-          <h3>Mecânica e Pneus Parque dos Príncipes</h3>
+          <h3>Mecânica e Pneus no Parque dos Príncipes</h3>
           <span class="unit-services">Mecânica Completa e Pneus</span>
           <p><i class="fas fa-map-marker-alt"></i> R. Dom Antônio, 370</p>
           <p><i class="fas fa-phone"></i> (12) 97811-3443</p>
@@ -362,7 +378,7 @@
       <!-- Unidade 3 -->
       <div class="unit-card">
         <div class="unit-info">
-          <h3>Borracharia Parque Itamaraty</h3>
+          <h3>Borracharia no Parque Itamaraty</h3>
           <span class="unit-services">Borracharia e Pneus</span>
           <p><i class="fas fa-map-marker-alt"></i> R. Carlos de Campos, 715</p>
           <p><i class="fas fa-phone"></i> (12) 98147-0102</p>
@@ -375,7 +391,7 @@
       <!-- Unidade 4 -->
       <div class="unit-card">
         <div class="unit-info">
-          <h3>Borracharia São João</h3>
+          <h3>Borracharia São João em Jacareí</h3>
           <span class="unit-services">Borracharia e Pneus</span>
           <p><i class="fas fa-map-marker-alt"></i> R. Santa Helena, 97</p>
           <p><i class="fas fa-phone"></i> (12) 98890-1317</p>
@@ -438,15 +454,14 @@
     </div>
   </section>
 
-  <!-- Avaliações -->
+  <!-- Avaliações Estilo Google -->
   <section id="avaliacoes" class="reviews-section">
     <div class="section-title">
       <h2>O que nossos clientes dizem</h2>
-      <img src="img/google.png" alt="Google" class="google-reviews-img">
+      <img src="img/Google-Logo-PNG10.png" alt="Google" class="google-reviews-img">
     </div>
     <div class="reviews-wrapper">
       <div class="reviews-track">
-        <!-- Review 1 -->
         <div class="review-card">
           <div class="review-header">
             <div class="review-avatar" style="background:#4285F4">L</div>
@@ -455,7 +470,6 @@
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Podem confiar, não é um centro automotivo que quer 'enfiar' serviços desnecessários. Sai de lá satisfeito."</p>
         </div>
-        <!-- Review 2 -->
         <div class="review-card">
           <div class="review-header">
             <div class="review-avatar" style="background:#EA4335">L</div>
@@ -464,7 +478,6 @@
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Excelente atendimento e preço justo. Profissionais honestos e competentes. Recomendo!"</p>
         </div>
-        <!-- Review 3 -->
         <div class="review-card">
           <div class="review-header">
             <div class="review-avatar" style="background:#FBBC05">F</div>
@@ -494,7 +507,7 @@
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ Completo -->
   <section id="faq">
     <div class="section-title"><h2>Dúvidas Frequentes</h2></div>
     <div class="faq-container">
@@ -507,12 +520,44 @@
         <div class="faq-answer">Trabalhamos com mecânica geral, troca de óleo, alinhamento e balanceamento, freios, suspensão, venda de pneus e borracharia.</div>
       </div>
       <div class="faq-item">
+        <button class="faq-question">Vocês fazem troca de óleo em Jacareí? <span>+</span></button>
+        <div class="faq-answer">Sim! Realizamos troca de óleo com produtos de alta qualidade, garantindo melhor desempenho e proteção para o motor do seu carro.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Tem alinhamento e balanceamento em Jacareí? <span>+</span></button>
+        <div class="faq-answer">Sim! Fazemos alinhamento e balanceamento para garantir mais segurança, estabilidade e evitar desgaste irregular dos pneus.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Vocês trabalham com pneus baratos? <span>+</span></button>
+        <div class="faq-answer">Sim! Temos pneus novos e remold com excelente custo-benefício em Jacareí, sempre com orientação para você escolher a melhor opção.</div>
+      </div>
+      <div class="faq-item">
         <button class="faq-question">Tem borracharia perto de mim em Jacareí? <span>+</span></button>
         <div class="faq-answer">Sim! Temos unidades com borracharia estrategicamente localizadas para atender emergências em toda a cidade.</div>
       </div>
       <div class="faq-item">
+        <button class="faq-question">Precisa agendar atendimento? <span>+</span></button>
+        <div class="faq-answer">Não é obrigatório. Você pode ir direto até uma das unidades ou entrar em contato pelo WhatsApp para agilizar seu atendimento.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Vocês atendem emergência ou serviço rápido? <span>+</span></button>
+        <div class="faq-answer">Sim! Trabalhamos com atendimento ágil para resolver problemas do seu veículo o mais rápido possível.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Onde fica o Chicão Centro Automotivo em Jacareí? <span>+</span></button>
+        <div class="faq-answer">Temos unidades no Jardim América, Parque dos Príncipes, Parque Itamaraty e Borracharia São João.</div>
+      </div>
+      <div class="faq-item">
         <button class="faq-question">O atendimento é confiável mesmo? <span>+</span></button>
         <div class="faq-answer">Sim! Nosso compromisso é com a transparência. Só realizamos serviços necessários e explicamos tudo antes de executar.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Vocês fazem orçamento sem compromisso? <span>+</span></button>
+        <div class="faq-answer">Sim! Você pode solicitar um orçamento sem compromisso pelo WhatsApp ou diretamente em uma das unidades.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Qual o melhor centro automotivo em Jacareí? <span>+</span></button>
+        <div class="faq-answer">O Chicão Centro Automotivo é uma das referências em Jacareí, com várias unidades e excelente avaliação dos clientes.</div>
       </div>
     </div>
   </section>
@@ -542,7 +587,7 @@
     </div>
   </footer>
 
-  <!-- WhatsApp -->
+  <!-- WhatsApp Float -->
   <a href="javascript:void(0)" onclick="openWaModal()" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
