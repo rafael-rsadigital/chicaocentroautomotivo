@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Chicão Centro Automotivo em Jacareí | Mecânica, Pneus e Borracharia</title>
+  <title>Chicão Centro Automotivo em Jacareí | Mecânico, Pneus e Borracharia</title>
   
   <meta name="description" content="Centro automotivo em Jacareí com serviços de mecânica, pneus, alinhamento, troca de óleo e borracharia. Atendimento rápido e preço justo. Qualidade Chicão!">
   
@@ -139,21 +139,21 @@
       padding: 80px 5% 0;
     }
 
-    /* Background Web Efeito Vidro - Ajustado */
+    /* Background Web Efeito Vidro - Ajustado para mais visibilidade */
     @media (min-width: 993px) {
       .hero {
         background-image: url('img/background-web-chicao.jpg');
         background-size: cover;
-        background-position: center 30%; /* Abaixa um pouco a imagem */
+        background-position: center 30%;
         background-repeat: no-repeat;
       }
       .hero::before {
         content: '';
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.3); /* Transparência mais visível (de 0.45 para 0.3) */
-        backdrop-filter: blur(15px); /* Desfoque levemente maior para realçar o efeito vidro */
-        -webkit-backdrop-filter: blur(15px);
+        background: rgba(0, 0, 0, 0.2); /* Reduzido de 0.3 para 0.2 para maior visibilidade */
+        backdrop-filter: blur(6px); /* Reduzido de 15px para 6px para tornar o fundo mais nítido */
+        -webkit-backdrop-filter: blur(6px);
         z-index: 1;
       }
     }
@@ -174,6 +174,7 @@
       color: var(--white);
       text-align: left;
       animation: fadeInUp 1s ease-out;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Sombra no texto para garantir leitura com fundo mais claro */
     }
 
     .hero h1 {
@@ -224,6 +225,14 @@
       font-weight: 800;
       margin-bottom: 15px;
       color: var(--secondary);
+    }
+
+    /* Imagem Google nas Avaliações */
+    .google-reviews-img {
+      max-width: 160px;
+      height: auto;
+      margin: 15px auto 0;
+      display: block;
     }
 
     /* Services Grid */
@@ -884,6 +893,8 @@
   <section id="avaliacoes" class="reviews-section">
     <div class="section-title">
       <h2>O que nossos clientes dizem</h2>
+      <!-- Imagem Google adicionada conforme solicitado -->
+      <img src="img/Google.JPG" alt="Avaliações Google" class="google-reviews-img">
     </div>
     <div class="reviews-wrapper" id="reviews-wrapper">
       <div class="reviews-track" id="reviews-track">
