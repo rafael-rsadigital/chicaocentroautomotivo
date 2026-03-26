@@ -97,12 +97,12 @@
   ]
   </script>
 
-  <!-- Google Fonts -->
+  <!-- Fontes do Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- FontAwesome Icons -->
+  <!-- Ícones FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -271,7 +271,7 @@
       object-fit: cover;
     }
 
-    /* Sections */
+    /* Secções */
     section {
       padding: 80px 5%;
     }
@@ -328,7 +328,7 @@
       margin-bottom: 20px;
     }
 
-    /* Reels Gallery */
+    /* Galeria de Estrutura */
     .reels-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -356,6 +356,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      background: #000; /* Fundo preto caso a imagem falhe */
     }
 
     .reel-caption {
@@ -367,7 +368,7 @@
       text-align: center;
     }
 
-    /* Reviews Section */
+    /* Depoimentos */
     .reviews-section {
       background: var(--secondary);
       color: var(--white);
@@ -458,7 +459,7 @@
       max-height: 200px;
     }
 
-    /* Units */
+    /* Unidades */
     .units-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -886,7 +887,7 @@
     </div>
   </section>
 
-  <!-- Galeria Estrutura (Reels Style) com Otimização de Performance e Capas (Poster) -->
+  <!-- Galeria Estrutura com Preload Metadata para garantir a capa -->
   <section id="galeria">
     <div class="section-title">
       <h2>Nossa Estrutura</h2>
@@ -896,7 +897,7 @@
     <div class="reels-grid">
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="none" poster="img/capa-apresentacao.webp">
+          <video controls preload="metadata" poster="img/capa-apresentacao.webp">
             <source src="video/apresentacao-chicao-centro-automotivo.mp4" type="video/mp4">
           </video>
         </div>
@@ -905,7 +906,7 @@
 
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="none" poster="img/capa-unidade-jardim.webp">
+          <video controls preload="metadata" poster="img/capa-unidade-jardim.webp">
             <source src="video/unidade-jardim-america.mp4" type="video/mp4">
           </video>
         </div>
@@ -914,7 +915,7 @@
 
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="none" poster="img/capa-parque-principes.webp">
+          <video controls preload="metadata" poster="img/capa-parque-principes.webp">
             <source src="video/unidade-parque-dos-principes.mp4" type="video/mp4">
           </video>
         </div>
@@ -923,7 +924,7 @@
 
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="none" poster="img/capa-parque-itamaraty.webp">
+          <video controls preload="metadata" poster="img/capa-parque-itamaraty.webp">
             <source src="video/Unidade-Parque-Itamaraty.webm" type="video/webm">
           </video>
         </div>
@@ -932,7 +933,7 @@
 
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="none" poster="img/capa-borracharia-sao-joao.webp">
+          <video controls preload="metadata" poster="img/capa-borracharia-sao-joao.webp">
             <source src="video/borracharia-sao-joao.mp4" type="video/mp4">
           </video>
         </div>
@@ -1002,7 +1003,7 @@
     </p>
   </section>
 
-  <!-- Footer -->
+  <!-- Rodapé -->
   <footer>
     <div class="footer-content">
       <div>
@@ -1021,12 +1022,12 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Float -->
+  <!-- Botão Flutuante WhatsApp -->
   <a href="javascript:void(0)" onclick="openWaModal()" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- WhatsApp Modal -->
+  <!-- Modal WhatsApp -->
   <div class="modal-overlay" id="waModal">
     <div class="modal-content">
       <div class="modal-close" onclick="closeWaModal()"><i class="fas fa-times"></i></div>
@@ -1113,7 +1114,7 @@
         }
     });
 
-    // Drag/Swipe para depoimentos
+    // Deslizar para depoimentos
     const slider = document.getElementById('reviews-wrapper');
     const track = document.getElementById('reviews-track');
     let isDown = false;
