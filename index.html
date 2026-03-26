@@ -113,7 +113,7 @@
     nav { display: flex; align-items: center; }
     nav a { color: var(--white); text-decoration: none; margin-left: 20px; font-size: 0.8rem; font-weight: 600; transition: var(--transition); text-transform: uppercase; }
     nav a:hover { color: var(--primary); }
-    .btn-nav { background: var(--primary); color: var(--secondary) !important; padding: 8px 15px; border-radius: 5px; margin-left: 20px; font-weight: 700; }
+    .btn-nav { background: var(--primary); color: var(--secondary) !important; padding: 8px 15px; border-radius: 5px; margin-left: 20px; font-weight: 700; text-decoration: none; }
     .menu-toggle { display: none; color: var(--white); font-size: 1.5rem; cursor: pointer; z-index: 1001; }
 
     /* Hero */
@@ -148,7 +148,7 @@
     .service-card i { font-size: 2.2rem; color: var(--primary); background: var(--secondary); width: 65px; height: 65px; line-height: 65px; border-radius: 50%; margin-bottom: 20px; display: inline-block; }
     .service-card h3 { font-weight: 800; font-size: 1.1rem; margin-bottom: 10px; text-transform: uppercase; }
 
-    /* Unidades - Fixed Layout */
+    /* Unidades */
     .units-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
     .unit-card { 
       background: var(--white); border-radius: 15px; overflow: hidden; 
@@ -202,12 +202,15 @@
     .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
     .footer-content h4 { color: #fff; margin-bottom: 15px; border-left: 4px solid var(--primary); padding-left: 10px; font-weight: 700; }
 
-    /* WhatsApp Float */
+    /* WhatsApp Float - No risk design */
     .whatsapp-float {
       position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px;
       border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; transition: 0.3s;
+      text-decoration: none !important; border: none !important; outline: none !important;
     }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float i { line-height: 1; display: block; }
 
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes scrollReviews { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
@@ -221,8 +224,14 @@
       nav a { margin: 15px 0; font-size: 1.2rem; }
       
       .hero { padding-top: 0; height: 100vh; }
-      .hero-container { grid-template-columns: 1fr; text-align: center; height: 100%; position: relative; }
-      .hero-text { z-index: 10; padding-top: 15vh; }
+      .hero-container { grid-template-columns: 1fr; text-align: center; height: 100%; position: relative; padding: 0 20px; }
+      
+      /* Ajuste Texto Hero Mobile */
+      .hero-text { z-index: 10; padding-top: 10vh; } /* Posição mais elevada */
+      .hero h1 { font-size: 1.8rem; margin-bottom: 30px; } /* Texto principal mais acima */
+      .hero p { margin-bottom: 50px; font-size: 1rem; } /* Pára-grafo mais abaixo */
+      .hero-btns { margin-top: 20px; } /* Espaçamento maior para o botão */
+      
       .hero-video-wrapper { 
         position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
         max-height: none; border-radius: 0; opacity: 0.6; z-index: 1; 
@@ -364,7 +373,7 @@
     </div>
   </section>
 
-  <!-- Unidades - Cards Corrigidos -->
+  <!-- Unidades -->
   <section id="unidades" style="background: var(--light);">
     <div class="section-title">
       <h2>Nossas Unidades em Jacareí</h2>
@@ -474,7 +483,7 @@
     </div>
   </section>
 
-  <!-- Avaliações Google Style -->
+  <!-- Avaliações - Repetição Infinita -->
   <section id="avaliacoes" class="reviews-section">
     <div class="section-title">
       <h2>O que nossos clientes dizem</h2>
@@ -518,20 +527,44 @@
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Atendimento diferenciado. Alinhamento e balanceamento ficaram top. Recomendo!"</p>
         </div>
-        <!-- Loop Duplication -->
+        <!-- Repetição para Loop Infinito -->
         <div class="review-card">
           <div class="review-header">
             <div class="review-avatar" style="background:#4285F4">L</div>
             <div class="review-user-info"><strong>Lucas Madona</strong><span>4 meses atrás</span></div>
           </div>
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p class="review-text">"Podem confiar, honestidade acima de tudo."</p>
+          <p class="review-text">"Podem confiar, não é um centro automotivo que quer 'enfiar' serviços desnecessários."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background:#EA4335">L</div>
+            <div class="review-user-info"><strong>Luciano Rizzuto</strong><span>2 meses atrás</span></div>
+          </div>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"Excelente atendimento e preço justo. Profissionais honestos e competentes."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background:#FBBC05">F</div>
+            <div class="review-user-info"><strong>Fabiano Maverick</strong><span>4 meses atrás</span></div>
+          </div>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"Honestidade nota 10! Problema resolvido com agilidade."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background:#34A853">F</div>
+            <div class="review-user-info"><strong>Fernando Cezar</strong><span>1 mês atrás</span></div>
+          </div>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"Ótima oficina. Atendimento diferenciado e de qualidade."</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ - 12 Itens -->
+  <!-- FAQ -->
   <section id="faq">
     <div class="section-title"><h2>Dúvidas Frequentes</h2></div>
     <div class="faq-container">
@@ -569,11 +602,11 @@
       </div>
       <div class="faq-item">
         <button class="faq-question">Onde fica o Chicão Centro Automotivo? <span>+</span></button>
-        <div class="faq-answer">Temos unidades no Jardim América, Parque dos Príncipes, Parque Itamaraty e Borracharia São João.</div>
+        <div class="faq-answer">Estamos no Jardim América, Parque dos Príncipes, Parque Itamaraty e Borracharia São João.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">O atendimento é confiável mesmo? <span>+</span></button>
-        <div class="faq-answer">Sim! Nosso compromisso é com a transparência. Só realizamos serviços necessários e explicamos tudo detalhadamente.</div>
+        <div class="faq-answer">Sim! Nosso compromisso é com a transparência. Só realizamos serviços necessários e explicamos tudo detalhadamente antes de executar.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Vocês fazem orçamento sem compromisso? <span>+</span></button>
@@ -586,7 +619,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Rodapé -->
   <footer>
     <div class="footer-content">
       <div>
@@ -605,7 +638,7 @@
     </div>
   </footer>
 
-  <!-- WhatsApp -->
+  <!-- WhatsApp Float - Clean -->
   <a href="javascript:void(0)" onclick="openWaModal()" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
