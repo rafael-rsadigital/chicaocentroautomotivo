@@ -118,6 +118,7 @@
       --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
+    /* Reset e Base */
     * {
       margin: 0;
       padding: 0;
@@ -133,6 +134,7 @@
       overflow-x: hidden;
     }
 
+    /* Cabeçalho */
     header {
       position: fixed;
       width: 100%;
@@ -271,7 +273,7 @@
       object-fit: cover;
     }
 
-    /* Secções */
+    /* Secções Gerais */
     section {
       padding: 80px 5%;
     }
@@ -356,7 +358,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      background: #000; /* Fundo preto caso a imagem falhe */
+      background: #000;
     }
 
     .reel-caption {
@@ -813,7 +815,6 @@
       </p>
     </div>
     <div class="units-grid">
-      <!-- Unidade 1 -->
       <div class="unit-card">
         <div class="unit-info">
           <h3>Centro Automotivo no Jardim América – Jacareí</h3>
@@ -831,7 +832,6 @@
         </div>
       </div>
 
-      <!-- Unidade 2 -->
       <div class="unit-card">
         <div class="unit-info">
           <h3>Mecânica e Pneus no Parque dos Príncipes</h3>
@@ -849,7 +849,6 @@
         </div>
       </div>
 
-      <!-- Unidade 3 -->
       <div class="unit-card">
         <div class="unit-info">
           <h3>Borracharia no Parque Itamaraty</h3>
@@ -867,7 +866,6 @@
         </div>
       </div>
 
-      <!-- Unidade 4 -->
       <div class="unit-card">
         <div class="unit-info">
           <h3>Borracharia São João em Jacareí</h3>
@@ -887,7 +885,7 @@
     </div>
   </section>
 
-  <!-- Galeria Estrutura com Preload Metadata para garantir a capa -->
+  <!-- Galeria Estrutura - Preload None para garantir o poster -->
   <section id="galeria">
     <div class="section-title">
       <h2>Nossa Estrutura</h2>
@@ -897,7 +895,7 @@
     <div class="reels-grid">
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="metadata" poster="img/capa-apresentacao.webp">
+          <video controls preload="none" poster="img/capa-apresentacao.webp">
             <source src="video/apresentacao-chicao-centro-automotivo.mp4" type="video/mp4">
           </video>
         </div>
@@ -906,7 +904,7 @@
 
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="metadata" poster="img/capa-unidade-jardim.webp">
+          <video controls preload="none" poster="img/capa-unidade-jardim.webp">
             <source src="video/unidade-jardim-america.mp4" type="video/mp4">
           </video>
         </div>
@@ -915,7 +913,7 @@
 
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="metadata" poster="img/capa-parque-principes.webp">
+          <video controls preload="none" poster="img/capa-parque-principes.webp">
             <source src="video/unidade-parque-dos-principes.mp4" type="video/mp4">
           </video>
         </div>
@@ -924,7 +922,7 @@
 
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="metadata" poster="img/capa-parque-itamaraty.webp">
+          <video controls preload="none" poster="img/capa-parque-itamaraty.webp">
             <source src="video/Unidade-Parque-Itamaraty.webm" type="video/webm">
           </video>
         </div>
@@ -933,7 +931,7 @@
 
       <div class="reel-item">
         <div class="reel-video-container">
-          <video controls preload="metadata" poster="img/capa-borracharia-sao-joao.webp">
+          <video controls preload="none" poster="img/capa-borracharia-sao-joao.webp">
             <source src="video/borracharia-sao-joao.mp4" type="video/mp4">
           </video>
         </div>
@@ -974,7 +972,7 @@
     </div>
   </section>
 
-  <!-- FAQ Reforçado com Palavras-Chave -->
+  <!-- FAQ -->
   <section id="faq">
     <div class="section-title">
       <h2>Dúvidas sobre Mecânico e Borracharia em Jacareí</h2>
@@ -995,7 +993,7 @@
     </div>
   </section>
 
-  <!-- BLOCO SEO INVISÍVEL ESTRATÉGICO -->
+  <!-- Bloco SEO Invisível -->
   <section style="display:none;">
     <h2>Mecânico em Jacareí SP - Chicão Centro Automotivo</h2>
     <p>
