@@ -139,7 +139,7 @@
       padding: 80px 5% 0;
     }
 
-    /* Background Web Efeito Vidro - Ajustado para mais visibilidade */
+    /* Background Web Efeito Vidro */
     @media (min-width: 993px) {
       .hero {
         background-image: url('img/background-web-chicao.jpg');
@@ -151,8 +151,8 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.2); /* Reduzido de 0.3 para 0.2 para maior visibilidade */
-        backdrop-filter: blur(6px); /* Reduzido de 15px para 6px para tornar o fundo mais nítido */
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
         z-index: 1;
       }
@@ -174,7 +174,7 @@
       color: var(--white);
       text-align: left;
       animation: fadeInUp 1s ease-out;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Sombra no texto para garantir leitura com fundo mais claro */
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
 
     .hero h1 {
@@ -227,12 +227,16 @@
       color: var(--secondary);
     }
 
-    /* Imagem Google nas Avaliações */
+    /* Imagem Google nas Avaliações - Com efeito de remoção de fundo */
     .google-reviews-img {
       max-width: 160px;
       height: auto;
       margin: 15px auto 0;
       display: block;
+      /* mix-blend-mode multiply remove o fundo branco da imagem */
+      mix-blend-mode: multiply;
+      /* Caso o fundo seja escuro e a logo clara, usar screen */
+      filter: contrast(1.1); 
     }
 
     /* Services Grid */
@@ -893,8 +897,8 @@
   <section id="avaliacoes" class="reviews-section">
     <div class="section-title">
       <h2>O que nossos clientes dizem</h2>
-      <!-- Imagem Google adicionada conforme solicitado -->
-      <img src="img/Google.JPG" alt="Avaliações Google" class="google-reviews-img">
+      <!-- Imagem Google atualizada para PNG com efeito de remoção de fundo via CSS -->
+      <img src="img/google.png" alt="Avaliações Google" class="google-reviews-img">
     </div>
     <div class="reviews-wrapper" id="reviews-wrapper">
       <div class="reviews-track" id="reviews-track">
