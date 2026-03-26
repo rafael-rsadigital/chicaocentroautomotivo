@@ -10,7 +10,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://chicaocentroautomotivo.com.br">
 
-  <!-- SEO Local / Schema.org Multi-unidades Completo -->
+  <!-- SEO Local / Schema.org Multi-unidades -->
   <script type="application/ld+json">
   [
     {
@@ -26,11 +26,7 @@
         "postalCode": "12322-050",
         "addressCountry": "BR"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -23.3016877,
-        "longitude": -46.0807621
-      },
+      "geo": { "@type": "GeoCoordinates", "latitude": -23.3016, "longitude": -46.0807 },
       "telephone": "+5512981670201",
       "url": "https://chicaocentroautomotivo.com.br"
     },
@@ -46,11 +42,7 @@
         "postalCode": "12310-041",
         "addressCountry": "BR"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -23.2842,
-        "longitude": -45.9619
-      },
+      "geo": { "@type": "GeoCoordinates", "latitude": -23.2842, "longitude": -45.9619 },
       "telephone": "+5512978113443",
       "url": "https://chicaocentroautomotivo.com.br"
     },
@@ -66,11 +58,7 @@
         "postalCode": "12307-430",
         "addressCountry": "BR"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -23.3050,
-        "longitude": -45.9670
-      },
+      "geo": { "@type": "GeoCoordinates", "latitude": -23.3050, "longitude": -45.9670 },
       "telephone": "+5512981470102",
       "url": "https://chicaocentroautomotivo.com.br"
     },
@@ -86,23 +74,17 @@
         "postalCode": "12322-550",
         "addressCountry": "BR"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -23.2900,
-        "longitude": -45.9500
-      },
+      "geo": { "@type": "GeoCoordinates", "latitude": -23.2900, "longitude": -45.9500 },
       "telephone": "+5512988901317",
       "url": "https://chicaocentroautomotivo.com.br"
     }
   ]
   </script>
 
-  <!-- Google Fonts -->
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -118,436 +100,112 @@
       --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
-    /* Reset e Base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--text); line-height: 1.6; background-color: var(--white); overflow-x: hidden; }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--text);
-      line-height: 1.6;
-      background-color: var(--white);
-      overflow-x: hidden;
-    }
-
-    /* Cabeçalho */
+    /* Header */
     header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(0,0,0,0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      padding: 10px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      transition: background 0.3s ease;
+      position: fixed; width: 100%; top: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px);
+      z-index: 1000; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3); transition: background 0.3s ease;
     }
-
-    .logo img {
-      height: 60px;
-      width: auto;
-      display: block;
-      border-radius: 12px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      transition: var(--transition);
-      text-transform: uppercase;
-    }
-
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    .btn-nav {
-      background: var(--primary);
-      color: var(--secondary) !important;
-      padding: 8px 15px;
-      border-radius: 5px;
-      margin-left: 20px;
-    }
-
-    .menu-toggle {
-      display: none;
-      color: var(--white);
-      font-size: 1.5rem;
-      cursor: pointer;
-      z-index: 1001;
-    }
+    .logo img { height: 60px; width: auto; display: block; border-radius: 12px; }
+    nav { display: flex; align-items: center; }
+    nav a { color: var(--white); text-decoration: none; margin-left: 20px; font-size: 0.8rem; font-weight: 600; transition: var(--transition); text-transform: uppercase; }
+    nav a:hover { color: var(--primary); }
+    .btn-nav { background: var(--primary); color: var(--secondary) !important; padding: 8px 15px; border-radius: 5px; margin-left: 20px; }
+    .menu-toggle { display: none; color: var(--white); font-size: 1.5rem; cursor: pointer; z-index: 1001; }
 
     /* Hero */
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      background-color: var(--secondary);
-      position: relative;
-      overflow: hidden;
-      padding: 80px 5% 0;
-    }
-
+    .hero { height: 100vh; display: flex; align-items: center; background-color: var(--secondary); position: relative; overflow: hidden; padding: 80px 5% 0; }
     @media (min-width: 993px) {
-      .hero {
-        background-image: url('img/background-web-chicao.jpg');
-        background-size: cover;
-        background-position: center 30%;
-        background-repeat: no-repeat;
-      }
-      .hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        z-index: 1;
-      }
+      .hero { background-image: url('img/background-web-chicao.jpg'); background-size: cover; background-position: center 30%; background-repeat: no-repeat; }
+      .hero::before { content: ''; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.25); backdrop-filter: blur(8px); z-index: 1; }
     }
+    .hero-container { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 40px; width: 100%; z-index: 2; position: relative; max-width: 1400px; margin: 0 auto; }
+    .hero-text { color: var(--white); text-align: left; animation: fadeInUp 1s ease-out; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
+    .hero-video-wrapper { position: relative; width: 100%; max-height: 450px; border-radius: 20px; overflow: hidden; box-shadow: 0 0 40px rgba(255, 206, 0, 0.15); }
+    .hero-video-wrapper video { width: 100%; display: block; }
 
-    .hero-container {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: center;
-      gap: 40px;
-      width: 100%;
-      z-index: 2;
-      position: relative;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
+    /* Marcas */
+    .brands-section { background: var(--white); padding: 40px 5%; border-bottom: 1px solid #eee; }
+    .brands-container { overflow: hidden; position: relative; width: 100%; }
+    .brands-track { display: flex; width: max-content; gap: 40px; animation: scrollBrands 35s linear infinite; align-items: center; }
+    .brands-track img { height: 50px; width: auto; filter: grayscale(100%); opacity: 0.5; transition: 0.3s; }
+    .brands-track img:hover { filter: grayscale(0); opacity: 1; }
+    @keyframes scrollBrands { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-    .hero-text {
-      color: var(--white);
-      text-align: left;
-      animation: fadeInUp 1s ease-out;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
+    /* Seções */
+    section { padding: 80px 5%; }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 15px; }
 
-    .hero h1 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
+    /* Unidades */
+    .units-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .unit-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #eee; display: flex; flex-direction: column; }
+    .unit-info { padding: 25px; flex: 1; }
+    .unit-info h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 5px; color: var(--secondary); text-transform: uppercase; }
+    .unit-services { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); text-transform: uppercase; margin-bottom: 15px; display: block; }
+    .unit-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
 
-    .hero p {
-      font-size: 1rem;
-      margin-bottom: 30px;
-      opacity: 0.9;
-      max-width: 550px;
-    }
+    /* Botões */
+    .btn-primary { background: var(--primary); color: var(--secondary); padding: 12px 20px; border-radius: 6px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: var(--transition); border: none; cursor: pointer; font-size: 0.9rem; }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    .btn-outline-dark { background: transparent; color: var(--secondary); border: 2px solid var(--secondary); padding: 10px 20px; border-radius: 6px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: var(--transition); cursor: pointer; font-size: 0.85rem; }
+    .btn-outline-dark:hover { background: var(--secondary); color: var(--white); }
 
-    .hero-video-wrapper {
-      position: relative;
-      width: 100%;
-      max-height: 450px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 0 40px rgba(255, 206, 0, 0.15);
-      display: flex;
-      align-items: center;
-    }
+    /* Galeria Reels */
+    .reels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .reel-video-container { width: 100%; aspect-ratio: 9/16; border-radius: 15px; overflow: hidden; border: 2px solid var(--primary); background: #000; box-shadow: var(--shadow); }
+    .reel-video-container video { width: 100%; height: 100%; object-fit: cover; }
+    .reel-caption { margin-top: 12px; font-weight: 700; font-size: 0.85rem; text-align: center; text-transform: uppercase; }
 
-    .hero-video-wrapper video {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-
-    /* Seção de Marcas */
-    .brands-section {
-      background: var(--white);
-      padding: 60px 5%;
-      border-top: 1px solid #eee;
-    }
-
-    .brands-slider {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      margin-top: 30px;
-    }
-
-    .brands-track {
-      display: flex;
-      width: max-content;
-      gap: 50px;
-      animation: scrollBrands 40s linear infinite;
-    }
-
-    .brands-track img {
-      height: 60px;
-      width: auto;
-      filter: grayscale(100%);
-      opacity: 0.6;
-      transition: var(--transition);
-    }
-
-    .brands-track img:hover {
-      filter: grayscale(0);
-      opacity: 1;
-      transform: scale(1.1);
-    }
-
-    @keyframes scrollBrands {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* Google Reviews Style */
-    .reviews-section {
-      background: #f8f9fa; 
-      color: var(--text);
-      overflow: hidden;
-    }
-
-    .reviews-section h2 { 
-      color: #202124; 
-      margin-bottom: 10px;
-    }
-
-    .google-reviews-img {
-      max-width: 140px;
-      height: auto;
-      margin: 0 auto 30px;
-      display: block;
-      mix-blend-mode: multiply;
-    }
-
-    .reviews-wrapper {
-      width: 100%;
-      overflow-x: auto;
-      cursor: grab;
-      padding: 20px 0 40px;
-      scrollbar-width: none;
-    }
-    
-    .reviews-wrapper::-webkit-scrollbar {
-      display: none;
-    }
-
-    .reviews-track {
-      display: flex;
-      gap: 20px;
-      width: max-content;
-      animation: scrollReviews 30s linear infinite; 
-    }
-
-    .review-card {
-      width: 340px;
-      background: var(--white);
-      padding: 24px;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .review-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .review-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #e8eaed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 500;
-      color: #5f6368;
-      text-transform: uppercase;
-    }
-
-    .review-user-info strong {
-      display: block;
-      color: #202124;
-      font-size: 0.9rem;
-    }
-
-    .review-user-info span {
-      display: block;
-      color: #70757a;
-      font-size: 0.75rem;
-    }
-
-    .stars { color: #fabb05; font-size: 0.85rem; margin: 4px 0; }
-
-    .review-text {
-      color: #3c4043;
-      font-size: 0.85rem;
-      line-height: 1.5;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Galeria de Estrutura */
-    .reels-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .reel-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .reel-video-container {
-      width: 100%;
-      aspect-ratio: 9/16;
-      border-radius: 15px;
-      overflow: hidden;
-      border: 2px solid var(--primary);
-      background: #000;
-      box-shadow: var(--shadow);
-      position: relative;
-    }
-
-    .reel-video-container video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    /* Avaliações Google Style */
+    .reviews-section { background: #f8f9fa; overflow: hidden; }
+    .google-reviews-img { max-width: 140px; margin: 0 auto 30px; display: block; mix-blend-mode: multiply; }
+    .reviews-wrapper { width: 100%; overflow: hidden; position: relative; padding: 20px 0; }
+    .reviews-track { display: flex; gap: 20px; width: max-content; animation: scrollReviews 30s linear infinite; }
+    .review-card { width: 320px; background: var(--white); padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 10px; font-family: 'Roboto', sans-serif; }
+    .review-header { display: flex; align-items: center; gap: 12px; }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 500; color: #fff; text-transform: uppercase; }
+    .stars { color: #fabb05; font-size: 0.8rem; }
+    .review-text { color: #3c4043; font-size: 0.85rem; }
 
     /* FAQ */
-    .faq-container {
-      max-width: 800px;
-      margin: auto;
-    }
+    .faq-container { max-width: 800px; margin: auto; }
+    .faq-item { margin-bottom: 10px; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; background: #fff; }
+    .faq-question { width: 100%; padding: 18px; background: #fff; border: none; text-align: left; font-weight: 700; display: flex; justify-content: space-between; cursor: pointer; }
+    .faq-answer { padding: 0 18px; max-height: 0; overflow: hidden; transition: 0.3s ease; background: #fafafa; font-size: 0.9rem; }
+    .faq-item.active .faq-answer { padding: 15px 18px; max-height: 300px; border-top: 1px solid #eee; }
 
-    .faq-item {
-      margin-bottom: 12px;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid #ddd;
-    }
+    /* Footer */
+    footer { background: var(--secondary); color: #888; padding: 60px 5% 30px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-content h4 { color: #fff; margin-bottom: 15px; }
 
-    .faq-question {
-      width: 100%;
-      padding: 20px;
-      background: var(--white);
-      border: none;
-      text-align: left;
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-    }
-
-    .faq-answer {
-      padding: 0 20px;
-      max-height: 0;
-      overflow: hidden;
-      transition: 0.3s ease;
-      background: #fafafa;
-    }
-
-    .faq-item.active .faq-answer {
-      padding: 15px 20px;
-      max-height: 350px;
-    }
-
-    /* Botão WhatsApp Flutuante */
+    /* WhatsApp Float */
     .whatsapp-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25d366;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      z-index: 999;
-      transition: var(--transition);
+      position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; transition: 0.3s;
     }
 
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scrollReviews { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
+    /* Mobile adjustments */
     @media (max-width: 992px) {
-      /* Marcas em 2 linhas no Mobile */
-      .brands-track {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-auto-flow: column;
-        gap: 30px;
-      }
-      
-      .brands-track img {
-        height: 45px;
-      }
-
-      header {
-        background: transparent;
-        box-shadow: none;
-      }
-
-      nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 100%;
-        background: var(--secondary);
-        flex-direction: column;
-        justify-content: center;
-        transition: 0.4s ease;
-        z-index: 1000;
-      }
-
+      .brands-track { display: grid; grid-template-rows: repeat(2, 1fr); grid-auto-flow: column; gap: 20px; }
+      header { background: transparent; box-shadow: none; }
+      .menu-toggle { display: block; }
+      nav { position: fixed; top: 0; right: -100%; height: 100vh; width: 100%; background: var(--secondary); flex-direction: column; justify-content: center; transition: 0.4s ease; }
       nav.active { right: 0; }
       nav a { margin: 15px 0; font-size: 1.2rem; }
-      .menu-toggle { display: block; }
-      .hero { padding-top: 0; }
       .hero-container { grid-template-columns: 1fr; text-align: center; height: 100%; }
-      .hero-text { text-align: center; z-index: 3; padding-top: 100px; }
       .hero-video-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.5; border-radius: 0; z-index: 1; }
       .hero-video-wrapper video { height: 100%; object-fit: cover; }
-
-      .reels-grid {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 15px;
-        padding-bottom: 20px;
-        scrollbar-width: none;
-      }
-      .reels-grid::-webkit-scrollbar { display: none; }
+      .reels-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding-bottom: 20px; scrollbar-width: none; }
       .reel-item { min-width: 180px; scroll-snap-align: start; }
     }
   </style>
@@ -591,42 +249,42 @@
     </div>
   </section>
 
-  <!-- Marcas -->
+  <!-- Trabalhamos com as Marcas -->
   <section class="brands-section">
-    <div class="section-title" style="margin-bottom: 30px;">
-      <h2 style="font-size: 1.5rem;">Trabalhamos com as Marcas</h2>
+    <div class="section-title" style="margin-bottom: 20px;">
+      <h2 style="font-size: 1.2rem; text-transform: uppercase; color: #555;">Trabalhamos com as Marcas</h2>
     </div>
-    <div class="brands-slider">
+    <div class="brands-container">
       <div class="brands-track">
-        <img src="img/marcas/logotipo-audi.jpg" alt="Logotipo Audi">
-        <img src="img/marcas/logotipo-bmw.jpg" alt="Logotipo BMW">
-        <img src="img/marcas/logotipo-citroen.jpg" alt="Logotipo Citroen">
-        <img src="img/marcas/logotipo-fiat.jpg" alt="Logotipo Fiat">
-        <img src="img/marcas/logotipo-ford.jpg" alt="Logotipo Ford">
-        <img src="img/marcas/logotipo-honda.jpg" alt="Logotipo Honda">
-        <img src="img/marcas/logotipo-hyundai.jpg" alt="Logotipo Hyundai">
-        <img src="img/marcas/logotipo-kia.jpg" alt="Logotipo Kia">
-        <img src="img/marcas/logotipo-mercedes.jpg" alt="Logotipo Mercedes">
-        <img src="img/marcas/logotipo-nissan.jpg" alt="Logotipo Nissan">
-        <img src="img/marcas/logotipo-peugeot.jpg" alt="Logotipo Peugeot">
-        <img src="img/marcas/logotipo-renaut.jpg" alt="Logotipo Renault">
-        <img src="img/marcas/logotipo-toyota.jpg" alt="Logotipo Toyota">
-        <img src="img/marcas/logotipo-wv.jpg" alt="Logotipo VW">
-        <!-- Duplicação para o loop infinito -->
-        <img src="img/marcas/logotipo-audi.jpg" alt="Logotipo Audi">
-        <img src="img/marcas/logotipo-bmw.jpg" alt="Logotipo BMW">
-        <img src="img/marcas/logotipo-citroen.jpg" alt="Logotipo Citroen">
-        <img src="img/marcas/logotipo-fiat.jpg" alt="Logotipo Fiat">
-        <img src="img/marcas/logotipo-ford.jpg" alt="Logotipo Ford">
-        <img src="img/marcas/logotipo-honda.jpg" alt="Logotipo Honda">
-        <img src="img/marcas/logotipo-hyundai.jpg" alt="Logotipo Hyundai">
-        <img src="img/marcas/logotipo-kia.jpg" alt="Logotipo Kia">
-        <img src="img/marcas/logotipo-mercedes.jpg" alt="Logotipo Mercedes">
-        <img src="img/marcas/logotipo-nissan.jpg" alt="Logotipo Nissan">
-        <img src="img/marcas/logotipo-peugeot.jpg" alt="Logotipo Peugeot">
-        <img src="img/marcas/logotipo-renaut.jpg" alt="Logotipo Renault">
-        <img src="img/marcas/logotipo-toyota.jpg" alt="Logotipo Toyota">
-        <img src="img/marcas/logotipo-wv.jpg" alt="Logotipo VW">
+        <img src="img/marcas/logotipo-audi.jpg" alt="Audi">
+        <img src="img/marcas/logotipo-bmw.jpg" alt="BMW">
+        <img src="img/marcas/logotipo-citroen.jpg" alt="Citroen">
+        <img src="img/marcas/logotipo-fiat.jpg" alt="Fiat">
+        <img src="img/marcas/logotipo-ford.jpg" alt="Ford">
+        <img src="img/marcas/logotipo-honda.jpg" alt="Honda">
+        <img src="img/marcas/logotipo-hyundai.jpg" alt="Hyundai">
+        <img src="img/marcas/logotipo-kia.jpg" alt="Kia">
+        <img src="img/marcas/logotipo-mercedes.jpg" alt="Mercedes">
+        <img src="img/marcas/logotipo-nissan.jpg" alt="Nissan">
+        <img src="img/marcas/logotipo-peugeot.jpg" alt="Peugeot">
+        <img src="img/marcas/logotipo-renaut.jpg" alt="Renault">
+        <img src="img/marcas/logotipo-toyota.jpg" alt="Toyota">
+        <img src="img/marcas/logotipo-wv.jpg" alt="VW">
+        <!-- Replicado para loop -->
+        <img src="img/marcas/logotipo-audi.jpg" alt="Audi">
+        <img src="img/marcas/logotipo-bmw.jpg" alt="BMW">
+        <img src="img/marcas/logotipo-citroen.jpg" alt="Citroen">
+        <img src="img/marcas/logotipo-fiat.jpg" alt="Fiat">
+        <img src="img/marcas/logotipo-ford.jpg" alt="Ford">
+        <img src="img/marcas/logotipo-honda.jpg" alt="Honda">
+        <img src="img/marcas/logotipo-hyundai.jpg" alt="Hyundai">
+        <img src="img/marcas/logotipo-kia.jpg" alt="Kia">
+        <img src="img/marcas/logotipo-mercedes.jpg" alt="Mercedes">
+        <img src="img/marcas/logotipo-nissan.jpg" alt="Nissan">
+        <img src="img/marcas/logotipo-peugeot.jpg" alt="Peugeot">
+        <img src="img/marcas/logotipo-renaut.jpg" alt="Renault">
+        <img src="img/marcas/logotipo-toyota.jpg" alt="Toyota">
+        <img src="img/marcas/logotipo-wv.jpg" alt="VW">
       </div>
     </div>
   </section>
@@ -635,7 +293,7 @@
   <section id="servicos">
     <div class="section-title">
       <h2>Serviços Automotivos em Jacareí</h2>
-      <p>O Chicão é referência para quem busca qualidade em mecânica e manutenção veicular.</p>
+      <p>Qualidade e transparência em todas as nossas unidades.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
@@ -646,22 +304,22 @@
       <div class="service-card">
         <i class="fas fa-car-side"></i>
         <h3>Alinhamento e Balanceamento</h3>
-        <p>Tecnologia de ponta para garantir mais segurança e economia de combustível.</p>
+        <p>Tecnologia de ponta para garantir mais segurança e economia.</p>
       </div>
       <div class="service-card">
         <i class="fas fa-stop-circle"></i>
         <h3>Freios e Suspensão</h3>
-        <p>Revisão completa com diagnóstico preciso para uma condução segura.</p>
+        <p>Revisão completa para uma condução estável e segura.</p>
       </div>
       <div class="service-card">
         <i class="fas fa-circle-notch"></i>
         <h3>Pneus e Borracharia</h3>
-        <p>Venda de pneus novos, remold e serviços de borracharia em Jacareí.</p>
+        <p>Venda de pneus novos, remold e borracharia em Jacareí.</p>
       </div>
     </div>
     <div style="text-align:center; margin-top:40px;">
       <button onclick="openWaModal()" class="btn-primary">
-        <i class="fab fa-whatsapp"></i> Solicitar Orçamento Agora
+        <i class="fab fa-whatsapp"></i> Pedir Orçamento Agora
       </button>
     </div>
   </section>
@@ -671,74 +329,59 @@
     <div class="section-title">
       <h2>Nossas Unidades em Jacareí</h2>
       <p style="max-width:800px; margin:20px auto; text-align:center;">
-        O Chicão Centro Automotivo possui unidades estrategicamente localizadas em Jacareí, oferecendo serviços de mecânica, pneus, alinhamento e borracharia próximos de você. Escolha a unidade mais próxima e tenha atendimento rápido e de confiança.
+        O Chicão Centro Automotivo possui unidades estrategicamente localizadas em Jacareí, oferecendo serviços de mecânica, pneus e borracharia próximos de você.
       </p>
     </div>
     <div class="units-grid">
+      <!-- Unidade 1 -->
       <div class="unit-card">
         <div class="unit-info">
-          <h3>Centro Automotivo no Jardim América – Jacareí</h3>
+          <h3>Centro Automotivo Jardim América</h3>
           <span class="unit-services">Mecânica Completa e Pneus</span>
           <p><i class="fas fa-map-marker-alt"></i> Av. Edmundo de Souza, 19</p>
           <p><i class="fas fa-phone"></i> (12) 98167-0201</p>
           <div class="unit-actions">
-            <button onclick="window.location.href='https://wa.me/5512981670201?text=Olá! Gostaria de um orçamento para a Unidade Jardim América.'" class="btn-primary">
-              <i class="fab fa-whatsapp"></i> Falar com Mecânico
-            </button>
-            <a href="https://maps.app.goo.gl/RBSLjXPvCxCGLs8V8" target="_blank" class="btn-outline-dark">
-              <i class="fas fa-location-arrow"></i> Ver no Google Maps
-            </a>
+            <button onclick="window.location.href='https://wa.me/5512981670201?text=Gostaria de um orçamento para a Unidade Jardim América.'" class="btn-primary">WhatsApp Unidade</button>
+            <a href="https://maps.app.goo.gl/RBSLjXPvCxCGLs8V8" target="_blank" class="btn-outline-dark">Abrir Localização no Maps</a>
           </div>
         </div>
       </div>
-
+      <!-- Unidade 2 -->
       <div class="unit-card">
         <div class="unit-info">
-          <h3>Mecânica e Pneus no Parque dos Príncipes</h3>
+          <h3>Mecânica e Pneus Parque dos Príncipes</h3>
           <span class="unit-services">Mecânica Completa e Pneus</span>
           <p><i class="fas fa-map-marker-alt"></i> R. Dom Antônio, 370</p>
           <p><i class="fas fa-phone"></i> (12) 97811-3443</p>
           <div class="unit-actions">
-            <button onclick="window.location.href='https://wa.me/5512978113443?text=Olá! Gostaria de um orçamento para a Unidade Parque dos Príncipes.'" class="btn-primary">
-              <i class="fab fa-whatsapp"></i> Pedir Orçamento Agora
-            </button>
-            <a href="https://maps.app.goo.gl/12qexfG8xWa8xm4W8" target="_blank" class="btn-outline-dark">
-              <i class="fas fa-location-arrow"></i> Ver no Google Maps
-            </a>
+            <button onclick="window.location.href='https://wa.me/5512978113443?text=Gostaria de um orçamento para a Unidade Parque dos Príncipes.'" class="btn-primary">WhatsApp Unidade</button>
+            <a href="https://maps.app.goo.gl/12qexfG8xWa8xm4W8" target="_blank" class="btn-outline-dark">Abrir Localização no Maps</a>
           </div>
         </div>
       </div>
-
+      <!-- Unidade 3 -->
       <div class="unit-card">
         <div class="unit-info">
-          <h3>Borracharia no Parque Itamaraty</h3>
+          <h3>Borracharia Parque Itamaraty</h3>
           <span class="unit-services">Borracharia e Pneus</span>
           <p><i class="fas fa-map-marker-alt"></i> R. Carlos de Campos, 715</p>
           <p><i class="fas fa-phone"></i> (12) 98147-0102</p>
           <div class="unit-actions">
-            <button onclick="window.location.href='https://wa.me/5512981470102?text=Olá! Vim pelo site e gostaria de atendimento para a Unidade Parque Itamaraty.'" class="btn-primary">
-              <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
-            </button>
-            <a href="https://maps.app.goo.gl/E2DNxt2Xr1yybmNp6" target="_blank" class="btn-outline-dark">
-              <i class="fas fa-location-arrow"></i> Ver no Google Maps
-            </a>
+            <button onclick="window.location.href='https://wa.me/5512981470102?text=Gostaria de atendimento para a Unidade Parque Itamaraty.'" class="btn-primary">WhatsApp Unidade</button>
+            <a href="https://maps.app.goo.gl/E2DNxt2Xr1yybmNp6" target="_blank" class="btn-outline-dark">Abrir Localização no Maps</a>
           </div>
         </div>
       </div>
-
+      <!-- Unidade 4 -->
       <div class="unit-card">
         <div class="unit-info">
-          <h3>Borracharia São João em Jacareí</h3>
+          <h3>Borracharia São João</h3>
           <span class="unit-services">Borracharia e Pneus</span>
           <p><i class="fas fa-map-marker-alt"></i> R. Santa Helena, 97</p>
           <p><i class="fas fa-phone"></i> (12) 98890-1317</p>
           <div class="unit-actions">
-            <button onclick="window.location.href='https://wa.me/5512988901317?text=Olá! Gostaria de falar com a Borracharia São João.'" class="btn-primary">
-              <i class="fab fa-whatsapp"></i> Atendimento Rápido
-            </button>
-            <a href="https://maps.app.goo.gl/sfDDiMErzK4yvphAA" target="_blank" class="btn-outline-dark">
-              <i class="fas fa-location-arrow"></i> Ver no Google Maps
-            </a>
+            <button onclick="window.location.href='https://wa.me/5512988901317?text=Gostaria de atendimento para a Borracharia São João.'" class="btn-primary">WhatsApp Unidade</button>
+            <a href="https://maps.app.goo.gl/sfDDiMErzK4yvphAA" target="_blank" class="btn-outline-dark">Abrir Localização no Maps</a>
           </div>
         </div>
       </div>
@@ -749,9 +392,8 @@
   <section id="galeria">
     <div class="section-title">
       <h2>Nossa Estrutura</h2>
-      <p>Confira nossos equipamentos e espaço preparado para seu veículo.</p>
+      <p>Veja de perto onde cuidamos do seu veículo.</p>
     </div>
-
     <div class="reels-grid">
       <div class="reel-item">
         <div class="reel-video-container">
@@ -761,7 +403,6 @@
         </div>
         <p class="reel-caption">Chicão Centro Automotivo</p>
       </div>
-
       <div class="reel-item">
         <div class="reel-video-container">
           <video controls preload="none" poster="img/capa-video-1-chicao-centro-automotivo.JPG">
@@ -770,7 +411,6 @@
         </div>
         <p class="reel-caption">Jardim América</p>
       </div>
-
       <div class="reel-item">
         <div class="reel-video-container">
           <video controls preload="none" poster="img/capa-video-parque-dos-principes.jpg">
@@ -779,7 +419,6 @@
         </div>
         <p class="reel-caption">Parque dos Príncipes</p>
       </div>
-
       <div class="reel-item">
         <div class="reel-video-container">
           <video controls preload="none" poster="img/capa-video-parque-itamaraty.jpeg">
@@ -788,7 +427,6 @@
         </div>
         <p class="reel-caption">Parque Itamaraty</p>
       </div>
-
       <div class="reel-item">
         <div class="reel-video-container">
           <video controls preload="none" poster="img/capa-video-borracharia-sao-joao-.jpg">
@@ -800,154 +438,103 @@
     </div>
   </section>
 
-  <!-- Avaliações Estilo Google -->
+  <!-- Avaliações -->
   <section id="avaliacoes" class="reviews-section">
     <div class="section-title">
       <h2>O que nossos clientes dizem</h2>
-      <img src="img/google.png" alt="Avaliações Google" class="google-reviews-img">
+      <img src="img/google.png" alt="Google" class="google-reviews-img">
     </div>
-    <div class="reviews-wrapper" id="reviews-wrapper">
-      <div class="reviews-track" id="reviews-track">
-        
+    <div class="reviews-wrapper">
+      <div class="reviews-track">
+        <!-- Review 1 -->
         <div class="review-card">
           <div class="review-header">
-            <div class="review-avatar" style="background: #1a73e8; color: #fff;">L</div>
-            <div class="review-user-info">
-              <strong>Lucas Madona</strong>
-              <span>4 meses atrás</span>
-            </div>
+            <div class="review-avatar" style="background:#4285F4">L</div>
+            <div class="review-user-info"><strong>Lucas Madona</strong><span>4 meses atrás</span></div>
           </div>
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p class="review-text">"Podem confiar, não é um centro automotivo que quer 'enfiar' serviços desnecessários no cliente. Fui, fiz o serviço que solicitei, eles orientaram o que deveria fazer. Sai de lá satisfeito."</p>
+          <p class="review-text">"Podem confiar, não é um centro automotivo que quer 'enfiar' serviços desnecessários. Sai de lá satisfeito."</p>
         </div>
-
+        <!-- Review 2 -->
         <div class="review-card">
           <div class="review-header">
-            <div class="review-avatar" style="background: #ea4335; color: #fff;">L</div>
-            <div class="review-user-info">
-              <strong>Luciano Rizzuto</strong>
-              <span>2 meses atrás</span>
-            </div>
+            <div class="review-avatar" style="background:#EA4335">L</div>
+            <div class="review-user-info"><strong>Luciano Rizzuto</strong><span>2 meses atrás</span></div>
           </div>
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Excelente atendimento e preço justo. Profissionais honestos e competentes. Recomendo!"</p>
         </div>
-
+        <!-- Review 3 -->
         <div class="review-card">
           <div class="review-header">
-            <div class="review-avatar" style="background: #fbbc05; color: #fff;">F</div>
-            <div class="review-user-info">
-              <strong>Fabiano Maverick</strong>
-              <span>4 meses atrás</span>
-            </div>
+            <div class="review-avatar" style="background:#FBBC05">F</div>
+            <div class="review-user-info"><strong>Fernando Cezar</strong><span>1 mês atrás</span></div>
           </div>
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p class="review-text">"Local com ótimo atendimento e com honestidade, o mais importante, pois tive meu problema resolvido e não precisei gastar nada além!"</p>
+          <p class="review-text">"Atendimento diferenciado. Alinhamento e balanceamento ficaram top. Recomendo!"</p>
         </div>
-
+        <!-- Replicado para loop -->
         <div class="review-card">
           <div class="review-header">
-            <div class="review-avatar" style="background: #34a853; color: #fff;">F</div>
-            <div class="review-user-info">
-              <strong>Fernando Cezar</strong>
-              <span>1 mês atrás</span>
-            </div>
+            <div class="review-avatar" style="background:#4285F4">L</div>
+            <div class="review-user-info"><strong>Lucas Madona</strong><span>4 meses atrás</span></div>
           </div>
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p class="review-text">"Ótima oficina. Alinhamento e balanceamento ficaram top. Troca de pneu ficou zerado. Atendimento diferenciado. Recomendo!"</p>
+          <p class="review-text">"Podem confiar, honestidade acima de tudo."</p>
         </div>
-
         <div class="review-card">
           <div class="review-header">
-            <div class="review-avatar" style="background: #673ab7; color: #fff;">L</div>
-            <div class="review-user-info">
-              <strong>Leticia Ibrahim</strong>
-              <span>4 meses atrás</span>
-            </div>
+            <div class="review-avatar" style="background:#EA4335">L</div>
+            <div class="review-user-info"><strong>Luciano Rizzuto</strong><span>2 meses atrás</span></div>
           </div>
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p class="review-text">"Ótimo lugar tive problema com pneu e eles me atenderam de prontidão, ótimo atendimento também! Indico sempre"</p>
+          <p class="review-text">"Excelente atendimento e preço justo. Profissionais honestos e competentes. Recomendo!"</p>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
   <section id="faq">
-    <div class="section-title">
-      <h2>Dúvidas sobre Mecânico e Borracharia em Jacareí</h2>
-    </div>
+    <div class="section-title"><h2>Dúvidas Frequentes</h2></div>
     <div class="faq-container">
       <div class="faq-item">
         <button class="faq-question">Vocês são mecânicos em Jacareí? <span>+</span></button>
-        <div class="faq-answer">Sim! O Chicão Centro Automotivo é referência como mecânico em Jacareí, oferecendo serviços completos de manutenção automotiva com atendimento rápido, transparente e preço justo.</div>
+        <div class="faq-answer">Sim! O Chicão Centro Automotivo é referência como mecânico em Jacareí, oferecendo serviços completos com transparência e preço justo.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Quais serviços vocês fazem? <span>+</span></button>
-        <div class="faq-answer">Trabalhamos com mecânica geral, troca de óleo, alinhamento e balanceamento, freios, suspensão, venda de pneus e borracharia em Jacareí. Atendemos carros nacionais e importados.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Vocês fazem troca de óleo em Jacareí? <span>+</span></button>
-        <div class="faq-answer">Sim! Realizamos troca de óleo com produtos de alta qualidade, garantindo melhor desempenho e proteção para o motor do seu carro.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Tem alinhamento e balanceamento em Jacareí? <span>+</span></button>
-        <div class="faq-answer">Sim! Fazemos alinhamento e balanceamento para garantir mais segurança, estabilidade e evitar desgaste irregular dos pneus.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Vocês trabalham com pneus baratos? <span>+</span></button>
-        <div class="faq-answer">Sim! Temos pneus novos e remold com excelente custo-benefício em Jacareí, sempre com orientação para você escolher a melhor opção.</div>
+        <div class="faq-answer">Trabalhamos com mecânica geral, troca de óleo, alinhamento e balanceamento, freios, suspensão, venda de pneus e borracharia.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Tem borracharia perto de mim em Jacareí? <span>+</span></button>
-        <div class="faq-answer">Sim! Temos unidades com borracharia em Jacareí prontas para atender emergências e serviços rápidos, com localização estratégica para facilitar seu acesso.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Precisa agendar atendimento? <span>+</span></button>
-        <div class="faq-answer">Não é obrigatório. Você pode ir direto até uma das unidades ou entrar em contato pelo WhatsApp para agilizar seu atendimento.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Vocês atendem emergência ou serviço rápido? <span>+</span></button>
-        <div class="faq-answer">Sim! Trabalhamos com atendimento ágil para resolver problemas do seu veículo o mais rápido possível, principalmente em serviços de borracharia e manutenção básica.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Onde fica o Chicão Centro Automotivo em Jacareí? <span>+</span></button>
-        <div class="faq-answer">Temos várias unidades em Jacareí, incluindo Jardim América, Parque dos Príncipes, Parque Itamaraty e Borracharia São João. Você pode escolher a unidade mais próxima diretamente pelo site.</div>
+        <div class="faq-answer">Sim! Temos unidades com borracharia estrategicamente localizadas para atender emergências em toda a cidade.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">O atendimento é confiável mesmo? <span>+</span></button>
-        <div class="faq-answer">Sim! Nosso compromisso é com transparência e honestidade. Só realizamos serviços necessários e explicamos tudo para o cliente antes de qualquer execução.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Vocês fazem orçamento sem compromisso? <span>+</span></button>
-        <div class="faq-answer">Sim! Você pode solicitar um orçamento sem compromisso pelo WhatsApp ou diretamente em uma das unidades.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Qual o melhor centro automotivo em Jacareí? <span>+</span></button>
-        <div class="faq-answer">O Chicão Centro Automotivo é uma das referências em Jacareí, com várias unidades, excelente avaliação de clientes e atendimento focado em qualidade e confiança.</div>
+        <div class="faq-answer">Sim! Nosso compromisso é com a transparência. Só realizamos serviços necessários e explicamos tudo antes de executar.</div>
       </div>
     </div>
   </section>
 
-  <!-- Bloco SEO Invisível -->
+  <!-- SEO Oculto -->
   <section style="display:none;">
     <h2>Mecânico em Jacareí SP - Chicão Centro Automotivo</h2>
-    <p>O Chicão Centro Automotivo é a sua melhor escolha de <strong>mecânico em Jacareí</strong>. Somos especialistas em serviços de <strong>troca de óleo em Jacareí</strong>, manutenção de freios, suspensão, <strong>alinhamento e balanceamento em Jacareí</strong>, além de contar com unidades de <strong>borracharia</strong> completas. Atendemos toda a região com pneus novos e remold com o melhor custo-benefício.</p>
+    <p>O Chicão Centro Automotivo é referência como mecânico em Jacareí, oferecendo troca de óleo, alinhamento, balanceamento, borracharia e manutenção completa.</p>
   </section>
 
-  <!-- Rodapé -->
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div>
-        <h4 style="color:white; margin-bottom:15px;">Chicão Centro Automotivo</h4>
+        <h4>Chicão Centro Automotivo</h4>
         <p>Referência em mecânica, pneus e borracharia em Jacareí - SP.</p>
       </div>
       <div>
-        <h4 style="color:white; margin-bottom:15px;">Menu</h4>
+        <h4>Menu</h4>
         <a href="#inicio" style="display:block; color:#777; text-decoration:none; margin-bottom:5px;">Início</a>
         <a href="#servicos" style="display:block; color:#777; text-decoration:none; margin-bottom:5px;">Serviços</a>
-        <a href="#galeria" style="display:block; color:#777; text-decoration:none;">Estrutura</a>
+        <a href="#unidades" style="display:block; color:#777; text-decoration:none;">Unidades</a>
       </div>
     </div>
     <div style="border-top: 1px solid #222; padding-top:20px; text-align:center; font-size:0.8rem;">
@@ -955,148 +542,48 @@
     </div>
   </footer>
 
-  <!-- Botão WhatsApp Flutuante -->
+  <!-- WhatsApp -->
   <a href="javascript:void(0)" onclick="openWaModal()" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
 
   <!-- Modal WhatsApp -->
-  <div class="modal-overlay" id="waModal">
-    <div class="modal-content">
-      <div class="modal-close" onclick="closeWaModal()"><i class="fas fa-times"></i></div>
+  <div class="modal-overlay" id="waModal" style="position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:2000; display:none; align-items:center; justify-content:center; padding:20px;">
+    <div style="background:#fff; padding:30px; border-radius:15px; max-width:400px; width:100%; text-align:center; position:relative;">
+      <div style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:1.5rem;" onclick="closeWaModal()">&times;</div>
       <h3 style="margin-bottom:15px;">Falar com o Chicão</h3>
-      
-      <a href="https://wa.me/5512981670201?text=Olá! Gostaria de um orçamento para a Unidade Jardim América." class="whatsapp-option">
-        <i class="fab fa-whatsapp"></i>
-        <div>
-          <strong>Unidade Jardim América</strong>
-          <span>Mecânica completa e Pneus</span>
-        </div>
-      </a>
-
-      <a href="https://wa.me/5512978113443?text=Olá! Gostaria de um orçamento para a Unidade Parque dos Príncipes." class="whatsapp-option">
-        <i class="fab fa-whatsapp"></i>
-        <div>
-          <strong>Unidade Parque dos Príncipes</strong>
-          <span>Mecânica completa e Pneus</span>
-        </div>
-      </a>
-
-      <a href="https://wa.me/5512981470102?text=Olá! Vim pelo site e gostaria de atendimento para a Unidade Parque Itamaraty." class="whatsapp-option">
-        <i class="fab fa-whatsapp"></i>
-        <div>
-          <strong>Unidade Parque Itamaraty</strong>
-          <span>Borracharia e Pneus</span>
-        </div>
-      </a>
-
-      <a href="https://wa.me/5512988901317?text=Olá! Vim pelo site e gostaria de atendimento para a Borracharia São João." class="whatsapp-option">
-        <i class="fab fa-whatsapp"></i>
-        <div>
-          <strong>Borracharia São João</strong>
-          <span>Borracharia e Pneus</span>
-        </div>
-      </a>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <a href="https://wa.me/5512981670201" target="_blank" class="btn-primary" style="background:#f8f9fa; border:1px solid #ddd;">Unidade Jardim América</a>
+        <a href="https://wa.me/5512978113443" target="_blank" class="btn-primary" style="background:#f8f9fa; border:1px solid #ddd;">Unidade Parque dos Príncipes</a>
+        <a href="https://wa.me/5512981470102" target="_blank" class="btn-primary" style="background:#f8f9fa; border:1px solid #ddd;">Unidade Parque Itamaraty</a>
+        <a href="https://wa.me/5512988901317" target="_blank" class="btn-primary" style="background:#f8f9fa; border:1px solid #ddd;">Borracharia São João</a>
+      </div>
     </div>
   </div>
 
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('nav');
     const header = document.getElementById('main-header');
 
     function toggleMenu() {
       if (window.innerWidth <= 992) {
         nav.classList.toggle('active');
-        if(nav.classList.contains('active')) {
-            header.style.background = "rgba(0,0,0,0.95)";
-        } else {
-            header.style.background = "transparent";
-        }
+        header.style.background = nav.classList.contains('active') ? "rgba(0,0,0,0.95)" : "transparent";
       }
     }
+    document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
 
-    menuToggle.addEventListener('click', toggleMenu);
+    function openWaModal() { document.getElementById('waModal').style.display = 'flex'; }
+    function closeWaModal() { document.getElementById('waModal').style.display = 'none'; }
+    window.onclick = (e) => { if(e.target == document.getElementById('waModal')) closeWaModal(); }
 
-    function openWaModal() {
-      document.getElementById('waModal').style.display = 'flex';
-    }
-
-    function closeWaModal() {
-      document.getElementById('waModal').style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-      if (event.target == document.getElementById('waModal')) closeWaModal();
-    }
-
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.parentElement;
-        item.classList.toggle('active');
-      });
+    document.querySelectorAll('.faq-question').forEach(b => {
+      b.addEventListener('click', () => b.parentElement.classList.toggle('active'));
     });
 
     window.addEventListener('scroll', () => {
-        if(window.innerWidth > 992) {
-            if(window.scrollY > 50) {
-                header.style.background = "rgba(0,0,0,0.95)";
-            } else {
-                header.style.background = "transparent";
-            }
-        }
+      if(window.innerWidth > 992) header.style.background = window.scrollY > 50 ? "rgba(0,0,0,0.95)" : "rgba(0,0,0,0.8)";
     });
-
-    // Carousel Reviews & Brands Drag/Swipe
-    function setupDraggable(wrapperId, trackId) {
-      const slider = document.getElementById(wrapperId);
-      const track = document.getElementById(trackId);
-      let isDown = false;
-      let startX;
-      let scrollLeft;
-
-      slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-        track.style.animationPlayState = 'paused';
-      });
-      slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        track.style.animationPlayState = 'running';
-      });
-      slider.addEventListener('mouseup', () => {
-        isDown = false;
-        track.style.animationPlayState = 'running';
-      });
-      slider.addEventListener('mousemove', (e) => {
-        if(!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
-        slider.scrollLeft = scrollLeft - walk;
-      });
-
-      slider.addEventListener('touchstart', (e) => {
-        isDown = true;
-        startX = e.touches[0].pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-        track.style.animationPlayState = 'paused';
-      });
-      slider.addEventListener('touchend', () => {
-        isDown = false;
-        track.style.animationPlayState = 'running';
-      });
-      slider.addEventListener('touchmove', (e) => {
-        if(!isDown) return;
-        const x = e.touches[0].pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
-        slider.scrollLeft = scrollLeft - walk;
-      });
-    }
-
-    setupDraggable('reviews-wrapper', 'reviews-track');
   </script>
-
 </body>
 </html>
