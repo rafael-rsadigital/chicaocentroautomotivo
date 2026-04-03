@@ -289,7 +289,7 @@
     .stars { color: #fabb05; font-size: 0.8rem; }
     .review-text { color: #3c4043; font-size: 0.85rem; line-height: 1.5; }
 
-    /* FAQ - Layout Estilizado */
+    /* FAQ Otimizado */
     .faq-container { max-width: 800px; margin: auto; }
     .faq-item { margin-bottom: 10px; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; background: #fff; }
     .faq-question { width: 100%; padding: 18px; background: #fff; border: none; text-align: left; font-weight: 700; display: flex; justify-content: space-between; cursor: pointer; color: #202124; }
@@ -311,7 +311,7 @@
     .whatsapp-float:hover { transform: scale(1.1); }
     .whatsapp-float i { line-height: 1; display: block; margin-top: -2px; }
 
-    /* Modal WhatsApp */
+    /* Modal WhatsApp Stylized */
     .modal-overlay {
       position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 2000;
       display: none; align-items: center; justify-content: center; padding: 20px;
@@ -354,7 +354,7 @@
       .hero-container { grid-template-columns: 1fr; text-align: left; height: 100%; position: relative; padding: 0 5%; }
       
       /* Ajuste Mobile: Texto MAIS ao topo conforme solicitado */
-      .hero-text { z-index: 10; padding-top: 2vh; text-align: left; } 
+      .hero-text { z-index: 10; padding-top: 5vh; text-align: left; } 
       .hero h1 { font-size: 1.6rem; margin-bottom: 15px; line-height: 1.2; text-align: left; }
       .hero p { margin-bottom: 35px; font-size: 0.95rem; padding: 0; text-align: left; }
       .hero-btns { margin-top: 30px; justify-content: flex-start; }
@@ -756,7 +756,7 @@
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/5512981670201" target="_blank" class="whatsapp-float">
+  <a href="javascript:void(0)" onclick="openWaModal()" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
 
