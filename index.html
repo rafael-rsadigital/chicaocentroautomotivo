@@ -179,11 +179,11 @@
     .hero-video-wrapper { position: relative; width: 100%; max-height: 450px; border-radius: 20px; overflow: hidden; box-shadow: 0 0 40px rgba(255, 206, 0, 0.15); }
     .hero-video-wrapper video { width: 100%; display: block; object-fit: cover; }
 
-    /* Marcas (Colorful) */
+    /* Marcas */
     .brands-section { background: var(--white); padding: 40px 5%; border-bottom: 1px solid #eee; }
     .brands-container { overflow: hidden; position: relative; width: 100%; }
     .brands-track { display: flex; width: max-content; gap: 40px; animation: scrollBrands 35s linear infinite; align-items: center; }
-    .brands-track img { height: 50px; width: auto; transition: 0.3s; filter: none; opacity: 1; }
+    .brands-track img { height: 50px; width: auto; transition: 0.3s; }
     .brands-track img:hover { transform: scale(1.15); }
     @keyframes scrollBrands { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
@@ -205,8 +205,8 @@
     .seo-content p { color: #555; margin-bottom: 20px; font-size: 1.05rem; }
     .seo-content a { color: var(--primary-dark); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--primary); }
 
-    /* Unidades - Layout Fixo */
-    .units-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    /* Unidades - Layout Fixo e Estável */
+    .units-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
     .unit-card { 
       background: var(--white); border-radius: 15px; overflow: hidden; 
       box-shadow: var(--shadow); border: 1px solid #eee; display: flex; flex-direction: column;
@@ -214,13 +214,19 @@
     }
     .unit-info { padding: 25px; flex: 1; display: flex; flex-direction: column; }
     .unit-info h3 { 
-      font-size: 1rem; font-weight: 800; margin-bottom: 8px; color: var(--secondary); 
-      text-transform: uppercase; min-height: 3em; display: flex; align-items: flex-start;
+      font-size: 1.1rem; font-weight: 800; margin-bottom: 10px; color: var(--secondary); 
+      text-transform: uppercase; min-height: 3.5em; display: flex; align-items: flex-start;
     }
     .unit-services { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); text-transform: uppercase; margin-bottom: 15px; display: block; }
-    .unit-info p { font-size: 0.85rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .unit-info p { font-size: 0.85rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; color: #444; }
     .unit-info p i { color: var(--primary-dark); width: 16px; }
-    .unit-actions { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+    .unit-actions { margin-top: auto; display: flex; flex-direction: column; gap: 10px; padding-top: 15px; }
+
+    /* Botões */
+    .btn-primary { background: var(--primary); color: var(--secondary); padding: 12px 20px; border-radius: 6px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: var(--transition); border: none; cursor: pointer; font-size: 0.9rem; }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    .btn-outline-dark { background: transparent; color: var(--secondary); border: 2px solid var(--secondary); padding: 10px 20px; border-radius: 6px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: var(--transition); cursor: pointer; font-size: 0.85rem; }
+    .btn-outline-dark:hover { background: var(--secondary); color: var(--white); }
 
     /* Galeria Reels */
     .reels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
@@ -228,7 +234,7 @@
     .reel-video-container video { width: 100%; height: 100%; object-fit: cover; }
     .reel-caption { margin-top: 12px; font-weight: 700; font-size: 0.85rem; text-align: center; text-transform: uppercase; }
 
-    /* Avaliações Google Style com Quebra de Linha */
+    /* Avaliações */
     .reviews-section { background: #f8f9fa; overflow: hidden; }
     .google-reviews-img { max-width: 140px; margin: 0 auto 30px; display: block; mix-blend-mode: multiply; }
     .reviews-wrapper { width: 100%; overflow: hidden; position: relative; padding: 20px 0; cursor: grab; }
@@ -257,11 +263,38 @@
     .whatsapp-float {
       position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px;
       border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; transition: 0.3s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4); z-index: 999; transition: 0.3s;
       text-decoration: none !important; border: none !important; outline: none !important;
     }
     .whatsapp-float:hover { transform: scale(1.1); }
     .whatsapp-float i { line-height: 1; display: block; margin-top: -2px; }
+
+    /* Modal WhatsApp Stylized */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 2000;
+      display: none; align-items: center; justify-content: center; padding: 20px;
+      backdrop-filter: blur(5px);
+    }
+    .modal-content {
+      background: #fff; padding: 35px 25px; border-radius: 20px; max-width: 420px; width: 100%;
+      text-align: center; position: relative; box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+    .modal-close {
+      position: absolute; top: 15px; right: 20px; cursor: pointer; font-size: 1.5rem;
+      color: #999; transition: 0.2s;
+    }
+    .modal-close:hover { color: #333; }
+    .modal-whatsapp-list { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .modal-whatsapp-item {
+      display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa;
+      border: 1px solid #eee; border-radius: 12px; text-decoration: none; color: #333;
+      font-weight: 700; transition: 0.3s; text-align: left;
+    }
+    .modal-whatsapp-item:hover {
+      background: #f0fdf4; border-color: #25d366; transform: translateX(5px);
+    }
+    .modal-whatsapp-item i { color: #25d366; font-size: 1.4rem; }
+    .modal-whatsapp-item span { font-size: 0.85rem; font-weight: 500; color: #666; display: block; }
 
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes scrollReviews { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
@@ -277,11 +310,10 @@
       .hero { padding-top: 0; height: 100vh; }
       .hero-container { grid-template-columns: 1fr; text-align: center; height: 100%; position: relative; padding: 0 20px; }
       
-      /* Texto Hero Mobile Ajustado */
       .hero-text { z-index: 10; padding-top: 10vh; } /* Título mais para o topo */
-      .hero h1 { font-size: 1.8rem; margin-bottom: 30px; } /* Título mais acima */
-      .hero p { margin-bottom: 50px; font-size: 1rem; } /* Texto apoio mais abaixo */
-      .hero-btns { margin-top: 20px; } /* Espaço maior p/ botão */
+      .hero h1 { font-size: 1.7rem; margin-bottom: 25px; line-height: 1.2; }
+      .hero p { margin-bottom: 45px; font-size: 1rem; padding: 0 10px; }
+      .hero-btns { margin-top: 25px; }
       
       .hero-video-wrapper { 
         position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
@@ -292,6 +324,9 @@
       .brands-track { display: grid; grid-template-rows: repeat(2, 1fr); grid-auto-flow: column; gap: 20px; }
       .reels-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding-bottom: 20px; scrollbar-width: none; }
       .reel-item { min-width: 240px; scroll-snap-align: start; }
+
+      /* Ajuste cards unidades mobile */
+      .unit-info h3 { min-height: auto; margin-bottom: 15px; }
     }
   </style>
 </head>
@@ -368,7 +403,7 @@
     </div>
   </section>
 
-  <!-- Serviços SEO -->
+  <!-- Serviços -->
   <section id="servicos">
     <div class="section-title">
       <h2>Mecânico em Jacareí: Serviços Automotivos Completos</h2>
@@ -411,11 +446,6 @@
         <p>Mecânico especializado em motores, correias e manutenção preventiva.</p>
       </div>
     </div>
-    <div style="text-align:center; margin-top:40px;">
-      <button onclick="openWaModal()" class="btn-primary">
-        <i class="fab fa-whatsapp"></i> Falar com um Mecânico Agora
-      </button>
-    </div>
   </section>
 
   <!-- Seção de Texto SEO Estratégico -->
@@ -431,13 +461,12 @@
     </div>
   </section>
 
-  <!-- Unidades -->
+  <!-- Unidades - Corrigidas Layout -->
   <section id="unidades">
     <div class="section-title">
       <h2>Nossas Unidades em Jacareí</h2>
     </div>
     <div class="units-grid">
-      <!-- Unidade 1 -->
       <div class="unit-card">
         <div class="unit-info">
           <h3>Centro Automotivo no Jardim América – Jacareí</h3>
@@ -445,12 +474,11 @@
           <p><i class="fas fa-map-marker-alt"></i> Av. Edmundo de Souza, 19</p>
           <p><i class="fas fa-phone"></i> (12) 98167-0201</p>
           <div class="unit-actions">
-            <button onclick="window.location.href='https://wa.me/5512981670201?text=Gostaria de um orçamento para a Unidade Jardim América.'" class="btn-primary">WhatsApp Unidade</button>
+            <a href="https://wa.me/5512981670201?text=Gostaria de um orçamento para a Unidade Jardim América." target="_blank" class="btn-primary">WhatsApp Unidade</a>
             <a href="https://maps.app.goo.gl/RBSLjXPvCxCGLs8V8" target="_blank" class="btn-outline-dark">Abrir Localização</a>
           </div>
         </div>
       </div>
-      <!-- Unidade 2 -->
       <div class="unit-card">
         <div class="unit-info">
           <h3>Mecânica e Pneus no Parque dos Príncipes</h3>
@@ -458,12 +486,11 @@
           <p><i class="fas fa-map-marker-alt"></i> R. Dom Antônio, 370</p>
           <p><i class="fas fa-phone"></i> (12) 97811-3443</p>
           <div class="unit-actions">
-            <button onclick="window.location.href='https://wa.me/5512978113443?text=Gostaria de um orçamento para a Unidade Parque dos Príncipes.'" class="btn-primary">WhatsApp Unidade</button>
+            <a href="https://wa.me/5512978113443?text=Gostaria de um orçamento para a Unidade Parque dos Príncipes." target="_blank" class="btn-primary">WhatsApp Unidade</a>
             <a href="https://maps.app.goo.gl/12qexfG8xWa8xm4W8" target="_blank" class="btn-outline-dark">Abrir Localização</a>
           </div>
         </div>
       </div>
-      <!-- Unidade 3 -->
       <div class="unit-card">
         <div class="unit-info">
           <h3>Borracharia no Parque Itamaraty</h3>
@@ -471,12 +498,11 @@
           <p><i class="fas fa-map-marker-alt"></i> R. Carlos de Campos, 715</p>
           <p><i class="fas fa-phone"></i> (12) 98147-0102</p>
           <div class="unit-actions">
-            <button onclick="window.location.href='https://wa.me/5512981470102?text=Olá! Vim pelo site e gostaria de atendimento para a Unidade Parque Itamaraty.'" class="btn-primary">WhatsApp Unidade</button>
+            <a href="https://wa.me/5512981470102?text=Olá! Vim pelo site e gostaria de atendimento para a Unidade Parque Itamaraty." target="_blank" class="btn-primary">WhatsApp Unidade</a>
             <a href="https://maps.app.goo.gl/E2DNxt2Xr1yybmNp6" target="_blank" class="btn-outline-dark">Abrir Localização</a>
           </div>
         </div>
       </div>
-      <!-- Unidade 4 -->
       <div class="unit-card">
         <div class="unit-info">
           <h3>Borracharia São João</h3>
@@ -484,7 +510,7 @@
           <p><i class="fas fa-map-marker-alt"></i> R. Santa Helena, 97</p>
           <p><i class="fas fa-phone"></i> (12) 98890-1317</p>
           <div class="unit-actions">
-            <button onclick="window.location.href='https://wa.me/5512988901317?text=Gostaria de atendimento para a Borracharia São João.'" class="btn-primary">WhatsApp Unidade</button>
+            <a href="https://wa.me/5512988901317?text=Gostaria de atendimento para a Borracharia São João." target="_blank" class="btn-primary">WhatsApp Unidade</a>
             <a href="https://maps.app.goo.gl/sfDDiMErzK4yvphAA" target="_blank" class="btn-outline-dark">Abrir Localização</a>
           </div>
         </div>
@@ -542,7 +568,7 @@
     </div>
   </section>
 
-  <!-- Avaliações Google Style -->
+  <!-- Avaliações -->
   <section id="avaliacoes" class="reviews-section">
     <div class="section-title">
       <h2>O que nossos clientes dizem</h2>
@@ -550,7 +576,6 @@
     </div>
     <div class="reviews-wrapper" id="reviews-wrapper">
       <div class="reviews-track" id="reviews-track">
-        
         <!-- Review 1 -->
         <div class="review-card">
           <div class="review-header">
@@ -578,7 +603,7 @@
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Atendimento diferenciado. Alinhamento e balanceamento ficaram top. Recomendo!"</p>
         </div>
-        <!-- Repetição para Loop Infinito Suave -->
+        <!-- Replicados para Loop Infinito -->
         <div class="review-card">
           <div class="review-header">
             <div class="review-avatar" style="background:#4285F4">L</div>
@@ -586,14 +611,6 @@
           </div>
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Honestidade acima de tudo. Voltarei com certeza ao Chicão."</p>
-        </div>
-        <div class="review-card">
-          <div class="review-header">
-            <div class="review-avatar" style="background:#EA4335">L</div>
-            <div class="review-user-info"><strong>Luciano Rizzuto</strong><span>2 meses atrás</span></div>
-          </div>
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p class="review-text">"O melhor mecânico de Jacareí. Atendimento nota 10 e profissionais competentes."</p>
         </div>
       </div>
     </div>
@@ -612,8 +629,8 @@
         <div class="faq-answer">Trabalhamos com mecânica geral, troca de óleo, arrefecimento, alinhamento, balanceamento, freios, suspensão e borracharia em Jacareí.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Tem borracharia perto de mim em Jacareí? <span>+</span></button>
-        <div class="faq-answer">Sim! Temos unidades com borracharia estrategicamente localizadas para atender emergências em toda a cidade de Jacareí.</div>
+        <button class="faq-question">Vocês fazem troca de óleo em Jacareí? <span>+</span></button>
+        <div class="faq-answer">Sim! Realizamos troca de óleo com produtos de alta qualidade, garantindo melhor desempenho e proteção para o motor do seu carro.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">O atendimento é confiável mesmo? <span>+</span></button>
@@ -646,16 +663,42 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Modal WhatsApp -->
-  <div class="modal-overlay" id="waModal" style="position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:2000; display:none; align-items:center; justify-content:center; padding:20px;">
-    <div style="background:#fff; padding:30px; border-radius:15px; max-width:400px; width:100%; text-align:center; position:relative;">
-      <div style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:1.5rem;" onclick="closeWaModal()">&times;</div>
-      <h3 style="margin-bottom:15px;">Falar com o Chicão</h3>
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <a href="https://wa.me/5512981670201" target="_blank" class="btn-primary">Unidade Jardim América</a>
-        <a href="https://wa.me/5512978113443" target="_blank" class="btn-primary">Unidade Parque dos Príncipes</a>
-        <a href="https://wa.me/5512981470102" target="_blank" class="btn-primary">Unidade Parque Itamaraty</a>
-        <a href="https://wa.me/5512988901317" target="_blank" class="btn-primary">Borracharia São João</a>
+  <!-- Modal WhatsApp Stylized -->
+  <div class="modal-overlay" id="waModal">
+    <div class="modal-content">
+      <div class="modal-close" onclick="closeWaModal()"><i class="fas fa-times"></i></div>
+      <h3 style="margin-bottom:5px; font-weight: 800;">Falar com o Chicão</h3>
+      <p style="color: #666; font-size: 0.9rem; margin-bottom: 20px;">Escolha a unidade mais próxima de você:</p>
+      
+      <div class="modal-whatsapp-list">
+        <a href="https://wa.me/5512981670201" target="_blank" class="modal-whatsapp-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            Jardim América
+            <span>Mecânica Geral e Pneus</span>
+          </div>
+        </a>
+        <a href="https://wa.me/5512978113443" target="_blank" class="modal-whatsapp-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            Parque dos Príncipes
+            <span>Mecânica Geral e Pneus</span>
+          </div>
+        </a>
+        <a href="https://wa.me/5512981470102" target="_blank" class="modal-whatsapp-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            Parque Itamaraty
+            <span>Borracharia e Pneus</span>
+          </div>
+        </a>
+        <a href="https://wa.me/5512988901317" target="_blank" class="modal-whatsapp-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            Borracharia São João
+            <span>Borracharia e Pneus</span>
+          </div>
+        </a>
       </div>
     </div>
   </div>
