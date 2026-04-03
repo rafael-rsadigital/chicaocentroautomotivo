@@ -259,7 +259,7 @@
     .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
     .footer-content h4 { color: #fff; margin-bottom: 15px; border-left: 4px solid var(--primary); padding-left: 10px; font-weight: 700; }
 
-    /* WhatsApp Float - Clean No-Risk Design */
+    /* WhatsApp Float */
     .whatsapp-float {
       position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px;
       border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px;
@@ -294,6 +294,7 @@
       background: #f0fdf4; border-color: #25d366; transform: translateX(5px);
     }
     .modal-whatsapp-item i { color: #25d366; font-size: 1.4rem; }
+    .modal-whatsapp-item div { display: flex; flex-direction: column; }
     .modal-whatsapp-item span { font-size: 0.85rem; font-weight: 500; color: #666; display: block; }
 
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -310,10 +311,11 @@
       .hero { padding-top: 0; height: 100vh; }
       .hero-container { grid-template-columns: 1fr; text-align: center; height: 100%; position: relative; padding: 0 20px; }
       
-      .hero-text { z-index: 10; padding-top: 10vh; } /* Título mais para o topo */
-      .hero h1 { font-size: 1.7rem; margin-bottom: 25px; line-height: 1.2; }
-      .hero p { margin-bottom: 45px; font-size: 1rem; padding: 0 10px; }
-      .hero-btns { margin-top: 25px; }
+      /* Ajuste Mobile: Texto mais ao topo */
+      .hero-text { z-index: 10; padding-top: 6vh; } 
+      .hero h1 { font-size: 1.6rem; margin-bottom: 20px; line-height: 1.2; }
+      .hero p { margin-bottom: 40px; font-size: 0.95rem; padding: 0 5px; }
+      .hero-btns { margin-top: 15px; }
       
       .hero-video-wrapper { 
         position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
@@ -321,7 +323,15 @@
       }
       .hero-video-wrapper video { height: 100%; object-fit: cover; }
       
-      .brands-track { display: grid; grid-template-rows: repeat(2, 1fr); grid-auto-flow: column; gap: 20px; }
+      /* Marcas Mobile: Mais rápido (20s) e em 2 linhas */
+      .brands-track { 
+        display: grid; 
+        grid-template-rows: repeat(2, 1fr); 
+        grid-auto-flow: column; 
+        gap: 20px; 
+        animation-duration: 20s; 
+      }
+      
       .reels-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 15px; padding-bottom: 20px; scrollbar-width: none; }
       .reel-item { min-width: 240px; scroll-snap-align: start; }
 
@@ -461,7 +471,7 @@
     </div>
   </section>
 
-  <!-- Unidades - Corrigidas Layout -->
+  <!-- Unidades -->
   <section id="unidades">
     <div class="section-title">
       <h2>Nossas Unidades em Jacareí</h2>
@@ -612,6 +622,23 @@
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
           <p class="review-text">"Honestidade acima de tudo. Voltarei com certeza ao Chicão."</p>
         </div>
+        <!-- Cópias para efeito infinito -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background:#4285F4">L</div>
+            <div class="review-user-info"><strong>Lucas Madona</strong><span>4 meses atrás</span></div>
+          </div>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"Podem confiar, não é um centro automotivo que quer 'enfiar' serviços desnecessários no cliente. Sai de lá satisfeito."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background:#EA4335">L</div>
+            <div class="review-user-info"><strong>Luciano Rizzuto</strong><span>2 meses atrás</span></div>
+          </div>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"Excelente atendimento e preço justo. Profissionais honestos e competentes. Recomendo!"</p>
+        </div>
       </div>
     </div>
   </section>
@@ -629,8 +656,8 @@
         <div class="faq-answer">Trabalhamos com mecânica geral, troca de óleo, arrefecimento, alinhamento, balanceamento, freios, suspensão e borracharia em Jacareí.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Vocês fazem troca de óleo em Jacareí? <span>+</span></button>
-        <div class="faq-answer">Sim! Realizamos troca de óleo com produtos de alta qualidade, garantindo melhor desempenho e proteção para o motor do seu carro.</div>
+        <button class="faq-question">Tem borracharia perto de mim em Jacareí? <span>+</span></button>
+        <div class="faq-answer">Sim! Temos unidades com borracharia estrategicamente localizadas para atender emergências em toda a cidade de Jacareí.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">O atendimento é confiável mesmo? <span>+</span></button>
@@ -756,6 +783,11 @@
     slider.addEventListener('touchstart', startDrag);
     slider.addEventListener('touchend', endDrag);
     slider.addEventListener('touchmove', moveDrag);
+
+    // Infiniteloop reinforcement
+    track.addEventListener('animationiteration', () => {
+        // No logical change needed as CSS animation handles the reset based on -50%
+    });
   </script>
 </body>
 </html>
